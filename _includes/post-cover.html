@@ -1,0 +1,34 @@
+{% assign entry = include.post %}
+{% assign cover_theme = entry.cover_theme | default: 'signal' %}
+{% assign cover_subtitle = entry.cover_subtitle | default: entry.intro | default: entry.excerpt | strip_html | truncate: 130 %}
+{% assign cover_note = entry.cover_note | default: entry.excerpt | strip_html | truncate: 150 %}
+
+<figure class="journal-cover journal-cover--{{ include.context | default: 'article' }} journal-cover--{{ cover_theme }}">
+  {% if entry.cover_image %}
+    <img class="journal-cover-image" src="{{ entry.cover_image | relative_url }}" alt="Cover artwork for {{ entry.title }}" loading="lazy">
+  {% else %}
+    <div class="journal-cover-generated">
+      <div class="journal-cover-copy">
+        <span class="journal-cover-badge">Article {{ entry.article_number }}</span>
+        <h2 class="journal-cover-title">{{ entry.title }}</h2>
+        <p class="journal-cover-subtitle">{{ cover_subtitle }}</p>
+        <div class="journal-cover-note">
+          <span class="journal-cover-note-title">Journey Reflection</span>
+          <p>{{ cover_note }}</p>
+        </div>
+      </div>
+      <div class="journal-cover-visual" aria-hidden="true">
+        <span class="cover-orb cover-orb--one"></span>
+        <span class="cover-orb cover-orb--two"></span>
+        <div class="cover-station">
+          <span class="station-screen"></span>
+          <span class="station-base"></span>
+          <span class="station-leg station-leg--left"></span>
+          <span class="station-leg station-leg--right"></span>
+        </div>
+        <div class="cover-signal cover-signal--one"></div>
+        <div class="cover-signal cover-signal--two"></div>
+      </div>
+    </div>
+  {% endif %}
+</figure>

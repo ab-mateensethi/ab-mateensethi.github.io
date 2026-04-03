@@ -1,12 +1,16 @@
 ---
 layout: post
 title: "Orientation & Understanding University"
+article_number: 4
 date: 2026-01-31 09:00:00 +0500
 phase: "First Semester"
 focus: "Orientation & Academic Start"
 location: "Department and Campus"
 excerpt: "Orientation week helped transform uncertainty into clarity by introducing the campus, the department, and the expectations of university life."
 intro: "The first week of orientation became an important bridge between school life and the structure of university."
+cover_theme: "orientation"
+cover_subtitle: "Policies, departments, and academic expectations started turning uncertainty into a clearer university path."
+cover_note: "A visual marker for the foundational orientation phase of the Computer Engineering journey, focused on structure, discipline, and understanding the campus."
 filters:
   - Admissions
   - Academics

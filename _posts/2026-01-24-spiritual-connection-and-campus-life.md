@@ -1,12 +1,16 @@
 ---
 layout: post
 title: "Spiritual Connection & Campus Life"
+article_number: 3
 date: 2026-01-24 09:00:00 +0500
 phase: "First Semester"
 focus: "Faith & Community"
 location: "University Mosque"
 excerpt: "University life brought spiritual growth alongside social adjustment, creating a balance between worship, community, and academic responsibility."
 intro: "Some of the most grounding moments in university life came from spaces that offered both peace and belonging."
+cover_theme: "faith"
+cover_subtitle: "Balancing campus life with prayer, reflection, and community helped shape a more grounded start to university."
+cover_note: "A visual marker for the spiritual and social integration phase of the Computer Engineering journey, where faith and belonging moved together."
 filters:
   - Growth
   - Resilience

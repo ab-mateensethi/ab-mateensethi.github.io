@@ -39,7 +39,8 @@ body_class: blog-page
 <section class="post-list filtered-post-list">
   {% for post in sorted_posts %}
     <article class="post-card reveal filter-card" data-filter-card data-filters="{{ post.filters | join: '|' | downcase }}">
-      <p class="post-meta">Article {{ forloop.index }}</p>
+      {% include post-cover.html post=post context="listing" %}
+      <p class="post-meta">Article {{ post.article_number }}</p>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       <div class="post-labels">
         {% if post.phase %}

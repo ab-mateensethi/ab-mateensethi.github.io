@@ -1,12 +1,16 @@
 ---
 layout: post
 title: "Building Friendships & Support"
+article_number: 2
 date: 2026-01-17 09:00:00 +0500
 phase: "First Semester"
 focus: "Friendship & Belonging"
 location: "Hostel and Campus"
 excerpt: "The first week of university showed how small conversations, shared meals, and mutual support could grow into lasting friendships."
 intro: "Adjustment becomes easier when the people around you are learning, struggling, and growing alongside you."
+cover_theme: "connection"
+cover_subtitle: "Shared meals, hostel conversations, and everyday routines gradually turned unfamiliar faces into a circle of support."
+cover_note: "A visual marker for the relationship-building phase of the Computer Engineering journey, centered on trust, belonging, and support."
 filters:
   - Beginnings
   - Growth

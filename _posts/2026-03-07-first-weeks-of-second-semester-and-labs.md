@@ -1,12 +1,15 @@
 ---
 layout: post
 title: "First Weeks of Second Semester & Labs"
+article_number: 9
 date: 2026-03-07 09:00:00 +0500
 phase: "Second Semester"
 focus: "Labs & Academic Setup"
 location: "Labs and Department"
 excerpt: "The early weeks of the semester combined new teachers, practical lab work, and important administrative tasks that demanded focus and organization."
 intro: "The second semester quickly moved from introductions into hands-on practice, reminding me that preparation matters most when it turns into action."
+cover_theme: "systems"
+cover_image: "/assets/images/journal/article-09.jpeg"
 filters:
   - Academics
   - Growth

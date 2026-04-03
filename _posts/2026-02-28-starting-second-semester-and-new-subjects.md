@@ -1,12 +1,15 @@
 ---
 layout: post
 title: "Starting Second Semester & New Subjects"
+article_number: 8
 date: 2026-02-28 09:00:00 +0500
 phase: "Second Semester"
 focus: "Fresh Start & Mentorship"
 location: "Hostel and Campus"
 excerpt: "The second semester began with renewed confidence, new subjects, and an opportunity to support juniors as I became more settled in university life."
 intro: "Returning for a new semester felt different. Familiarity created confidence, and that confidence made space for leadership and fresh curiosity."
+cover_theme: "future"
+cover_image: "/assets/images/journal/article-08.jpeg"
 filters:
   - Beginnings
   - Transition

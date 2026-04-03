@@ -1,12 +1,16 @@
 ---
 layout: post
 title: "Lab Experiences & Hands-On Learning"
+article_number: 5
 date: 2026-02-07 09:00:00 +0500
 phase: "First Semester"
 focus: "Labs & Practical Skills"
 location: "University Labs"
 excerpt: "Lab sessions turned classroom theory into practical skill, building confidence through coding, experiments, teamwork, and problem solving."
 intro: "Hands-on learning added energy and realism to the semester, showing how technical concepts come alive through practice."
+cover_theme: "labs"
+cover_subtitle: "Coding labs, ICT practice, and physics experiments turned theory into tangible technical confidence."
+cover_note: "A visual marker for the practical lab phase of the Computer Engineering journey, where systems, experiments, and teamwork came to life."
 filters:
   - Academics
   - Challenges

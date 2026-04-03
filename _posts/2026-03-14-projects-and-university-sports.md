@@ -1,12 +1,15 @@
 ---
 layout: post
 title: "Projects & University Sports"
+article_number: 10
 date: 2026-03-14 09:00:00 +0500
 phase: "Second Semester"
 focus: "Projects & Campus Life"
 location: "Department and Sports Festival"
 excerpt: "Academic projects, sports participation, and Ramadan routines combined to create one of the most balanced and memorable periods of the semester."
 intro: "University life feels richest when technical growth, teamwork, and personal discipline all move forward together."
+cover_theme: "future"
+cover_image: "/assets/images/journal/article-10.jpeg"
 filters:
   - Academics
   - Future

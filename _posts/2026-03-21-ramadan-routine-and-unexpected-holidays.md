@@ -1,12 +1,15 @@
 ---
 layout: post
 title: "Ramadan Routine & Unexpected Holidays"
+article_number: 11
 date: 2026-03-21 09:00:00 +0500
 phase: "Second Semester"
 focus: "Discipline & Adaptability"
 location: "Campus and Online"
 excerpt: "Balancing fasting, quizzes, and a sudden shift to online learning became a lesson in resilience, planning, and flexibility."
 intro: "Ramadan already asked for discipline, and unexpected changes in the semester made that discipline even more important."
+cover_theme: "resilience"
+cover_image: "/assets/images/journal/article-11.jpeg"
 filters:
   - Challenges
   - Resilience
