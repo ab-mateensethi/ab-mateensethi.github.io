@@ -47,6 +47,10 @@ html[data-theme="dark"] {
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -803,6 +807,12 @@ p {
 .social-link:focus-visible {
   background: rgba(49, 91, 140, 0.14);
   border-color: rgba(49, 91, 140, 0.24);
+}
+
+.social-icon {
+  width: 1.18rem;
+  height: 1.18rem;
+  fill: var(--accent);
 }
 
 .social-glyph {
