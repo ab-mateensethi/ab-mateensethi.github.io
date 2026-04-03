@@ -6,38 +6,75 @@ description: Contact Ab Mateen Sethi directly through email.
 body_class: contact-page
 ---
 <section class="page-intro reveal">
-  <div class="eyebrow">Contact Us</div>
-  <h1>Reach out directly</h1>
-  <p class="lead">If you would like to connect about academics, projects, opportunities, or feedback on the website, email is the best and clearest way to contact me.</p>
+  <div class="eyebrow">GET IN TOUCH</div>
+  <h1>Inquiries &amp; Academic Exchange</h1>
+  <p class="lead">For professional opportunities, technical collaborations or detailed feedback regarding "Abdul Mateen Chronicles," please reach out directly. I value structured communication and aim to respond to all academic and project-based inquiries promptly via email.</p>
 </section>
 
 <section class="contact-grid">
   <article class="contact-card reveal">
-    <div class="eyebrow">Email</div>
-    <h2>Direct contact</h2>
+    <div class="eyebrow">EMAIL</div>
+    <h2>Direct Correspondence</h2>
     <a class="contact-link" href="mailto:abmateensethi@gmail.com">abmateensethi@gmail.com</a>
-    <p>You can use this email for introductions, collaboration, academic networking, project discussions, or general communication.</p>
+    <p>I am available for academic networking, project collaborations and professional inquiries. Whether you have a specific proposal or just want to introduce yourself, feel free to reach out. I prioritize clear communication and aim to respond to all professional emails promptly.</p>
   </article>
 
   <article class="contact-card reveal">
-    <div class="eyebrow">Best For</div>
-    <h2>Meaningful and professional conversations</h2>
-    <p>I appreciate clear messages with a little context. Whether the topic is study, technology, writing, or future opportunities, thoughtful communication always makes the conversation better.</p>
+    <div class="eyebrow">BEST FOR</div>
+    <h2>Clear Context, Better Conversations</h2>
+    <p>I value clear, context-driven communication. Whether discussing emerging technologies, academic research or future professional ventures, I believe that a thoughtful exchange of ideas is the foundation of every successful collaboration.</p>
   </article>
 
   <article class="contact-card reveal">
-    <div class="eyebrow">Website Structure</div>
-    <h2>A dedicated contact page on purpose</h2>
-    <p>This page keeps communication simple and easy to find, while the homepage remains focused on identity and the blog remains focused on the full university journey.</p>
+    <div class="eyebrow">SYSTEM STRUCTURE</div>
+    <h2>Intentional Structure for Better Engagement</h2>
+    <p>This portfolio is structured for maximum clarity. By isolating the contact channel, I ensure that communication remains streamlined and accessible, allowing the homepage to serve as a focused identity hub while the blog provides an in-depth archive of my engineering journey.</p>
   </article>
 </section>
 
 <section class="wide-card reveal">
-  <div class="eyebrow">Stay Connected</div>
+  <div class="eyebrow">STAY CONNECTED</div>
   <h2>One message can start a good conversation</h2>
-  <p>If something in my journey, work, or writing resonates with you, feel free to reach out. I value respectful communication, shared learning, and genuine connections.</p>
+  <p>If any aspect of my technical journey or academic research resonates with your interests, I welcome the opportunity to connect. I value high-standard communication, collaborative learning and building purposeful professional networks.</p>
   <div class="button-row">
     <a class="button primary" href="mailto:abmateensethi@gmail.com">Email Me</a>
-    <a class="button ghost" href="{{ '/blog/' | relative_url }}">Read the journal</a>
+    <a class="button ghost" href="{{ '/blog/' | relative_url }}">Read The Chronicles</a>
   </div>
+</section>
+
+<section class="wide-card reveal contact-form-card">
+  <div class="eyebrow">QUICK CONNECT</div>
+  <h2>Draft Your Message Directly</h2>
+  <p>Utilize the interface below to structure your message. Upon submission, your local mail client will generate a draft with these details, ensuring a secure and direct line of communication for your review.</p>
+
+  <form class="contact-form" data-contact-form>
+    <div class="contact-form-grid">
+      <label class="contact-field">
+        <span>Your Name</span>
+        <input type="text" name="name" placeholder="Enter your name" required>
+      </label>
+
+      <label class="contact-field">
+        <span>Your Email</span>
+        <input type="email" name="email" placeholder="Enter your email" required>
+      </label>
+    </div>
+
+    <label class="contact-field contact-field--full">
+      <span>Your Message</span>
+      <textarea name="message" rows="8" placeholder="Write your message here" required></textarea>
+    </label>
+
+    <div class="contact-form-meta">
+      <p class="contact-word-count" data-word-count>0 / 500 words</p>
+      <p class="contact-status" data-contact-status aria-live="polite"></p>
+    </div>
+
+    <div class="button-row">
+      <button class="button primary" type="submit">Create Email Draft</button>
+      <a class="button ghost" href="mailto:abmateensethi@gmail.com">Open Email Directly</a>
+    </div>
+  </form>
+
+  <p class="contact-footnote">This module utilizes client-side mail protocols to ensure maximum privacy and direct delivery.</p>
 </section>
