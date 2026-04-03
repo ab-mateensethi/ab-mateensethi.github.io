@@ -9,32 +9,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem("theme");
+          if (savedTheme === "dark" || savedTheme === "light") {
+            document.documentElement.setAttribute("data-theme", savedTheme);
+          }
+        } catch (error) {}
+      })();
+    </script>
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   </head>
   <body class="{{ page.body_class | default: 'site-page' }}">
     <div class="site-shell">
       <header class="site-header">
         <a class="brand" href="{{ '/' | relative_url }}">
-          <span class="brand-mark">AMS</span>
           <span class="brand-text">
-            <strong>{{ site.title }}</strong>
-            <small>Computer Engineering Student</small>
+            <strong>Abdul Mateen Chronicles</strong>
+            <small>Computer Engineering Learner</small>
           </span>
         </a>
 
-        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="nav-toggle-label">Menu</span>
-        </button>
+        <div class="header-center">
+          <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}is-active{% endif %}">Home</a>
+            <a href="{{ '/blog/' | relative_url }}" class="{% if blog_active %}is-active{% endif %}">Blog</a>
+            <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}is-active{% endif %}">About</a>
+            <a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}is-active{% endif %}">Contact Us</a>
+          </nav>
+        </div>
 
-        <nav id="site-nav" class="site-nav" aria-label="Primary">
-          <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}is-active{% endif %}">Home</a>
-          <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}is-active{% endif %}">About</a>
-          <a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}is-active{% endif %}">Contact Us</a>
-          <a href="{{ '/blog/' | relative_url }}" class="{% if blog_active %}is-active{% endif %}">Blog</a>
-        </nav>
+        <div class="header-actions">
+          <div class="mode-menu">
+            <button class="mode-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mode-options">
+              <span>Mode</span>
+              <span class="mode-caret" aria-hidden="true"></span>
+            </button>
+            <div id="mode-options" class="mode-options" hidden>
+              <button class="mode-option" type="button" data-theme-value="light">Light Mode</button>
+              <button class="mode-option" type="button" data-theme-value="dark">Dark Mode</button>
+            </div>
+          </div>
+
+          <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="nav-toggle-label">Menu</span>
+          </button>
+        </div>
       </header>
 
       <main class="site-main">
@@ -42,13 +66,21 @@
       </main>
 
       <footer class="site-footer">
-        <div>
-          <p class="footer-title">{{ site.title }}</p>
-          <p class="footer-copy">A personal website built around identity, growth, and a dedicated university journal that keeps the homepage clean and the stories easy to explore.</p>
+        <div class="footer-branding">
+          <p class="footer-title">Abdul Mateen</p>
+          <p class="footer-copy">An engineering portfolio and digital archive designed to bridge technical milestones with personal growth. This space maintains a clutter-free interface, ensuring my professional identity remains focused while my university stories remain easily accessible.</p>
         </div>
-        <div class="footer-links">
-          <a href="mailto:abmateensethi@gmail.com">abmateensethi@gmail.com</a>
-          <a href="{{ '/blog/' | relative_url }}">Browse the journal</a>
+
+        <div class="footer-socials" aria-label="Professional links">
+          <a class="social-link" href="https://www.facebook.com/share/187YqUQosv/" target="_blank" rel="noreferrer" aria-label="Facebook">
+            <span class="social-glyph">Fb</span>
+          </a>
+          <a class="social-link" href="https://www.instagram.com/ab.mateen_sethiii?igsh=OHJxanhwZzFyMW0x" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <span class="social-glyph">Ig</span>
+          </a>
+          <a class="social-link" href="https://www.threads.com/@ab.mateen_sethiii" target="_blank" rel="noreferrer" aria-label="Threads">
+            <span class="social-glyph">Th</span>
+          </a>
         </div>
       </footer>
     </div>
