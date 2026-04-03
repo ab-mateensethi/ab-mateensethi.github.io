@@ -9,6 +9,7 @@ location: "Dina to Faisalabad"
 excerpt: "The move from Dina to Faisalabad marked the beginning of university life, filled with new routines, fresh responsibility, and a strong sense of possibility."
 intro: "The journey to university was more than travel. It was the beginning of independence, adjustment, and the first real step into a new chapter of life."
 cover_theme: "dawn"
+cover_image: "/assets/images/journal/article-01.jpeg"
 cover_subtitle: "From Dina to Faisalabad, the first chapter opened with travel, anticipation, and the first glimpse of campus life."
 cover_note: "A visual marker for the arrival phase of the Computer Engineering journey, shaped by travel, first impressions, and the beginning of hostel independence."
 filters:

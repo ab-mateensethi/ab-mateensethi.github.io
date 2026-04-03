@@ -9,6 +9,7 @@ location: "Computer Engineering Department"
 excerpt: "Final exams tested not just subject knowledge, but also discipline, time management, teamwork, and the value of studying together."
 intro: "The end of the semester demanded more focus, but it also revealed how powerful structured preparation and group learning can be."
 cover_theme: "resilience"
+cover_image: "/assets/images/journal/article-07.jpeg"
 cover_subtitle: "Study groups, final preparation, and a strong GPA marked the turning point from pressure to confidence."
 cover_note: "A visual marker for the rigorous exam phase of the Computer Engineering journey, defined by preparation, collaboration, and academic confidence."
 filters:

@@ -9,6 +9,7 @@ location: "University Labs"
 excerpt: "Lab sessions turned classroom theory into practical skill, building confidence through coding, experiments, teamwork, and problem solving."
 intro: "Hands-on learning added energy and realism to the semester, showing how technical concepts come alive through practice."
 cover_theme: "labs"
+cover_image: "/assets/images/journal/article-05.jpeg"
 cover_subtitle: "Coding labs, ICT practice, and physics experiments turned theory into tangible technical confidence."
 cover_note: "A visual marker for the practical lab phase of the Computer Engineering journey, where systems, experiments, and teamwork came to life."
 filters:

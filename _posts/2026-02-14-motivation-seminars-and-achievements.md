@@ -9,6 +9,7 @@ location: "Campus and Home"
 excerpt: "Encouragement from teachers, exposure to industry speakers, and milestones like scholarship confirmation made this stage especially motivating."
 intro: "Sometimes progress feels strongest when effort, guidance, and opportunity begin to align at the same time."
 cover_theme: "achievement"
+cover_image: "/assets/images/journal/article-06.jpeg"
 cover_subtitle: "Mentorship, seminars, and milestone wins created a period of motivation and forward-looking momentum."
 cover_note: "A visual marker for the motivational growth phase of the Computer Engineering journey, shaped by expert guidance, scholarship success, and achievement."
 filters:
