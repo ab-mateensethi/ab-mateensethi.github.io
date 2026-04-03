@@ -3,6 +3,7 @@ document.body.classList.add("js-ready");
 const root = document.documentElement;
 const navButton = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".site-nav");
+const header = document.querySelector(".site-header");
 const modeMenu = document.querySelector(".mode-menu");
 const modeToggle = document.querySelector(".mode-toggle");
 const modeOptions = document.querySelector(".mode-options");
@@ -67,6 +68,35 @@ if (navButton && nav) {
       navButton.setAttribute("aria-expanded", "false");
     });
   });
+}
+
+if (header) {
+  let lastScrollY = window.scrollY;
+
+  const syncHeaderVisibility = () => {
+    const currentScrollY = window.scrollY;
+    const navIsOpen = nav && nav.classList.contains("is-open");
+    const modeIsOpen = modeOptions && !modeOptions.hasAttribute("hidden");
+    const shouldHide = currentScrollY > 140 && currentScrollY > lastScrollY && !navIsOpen && !modeIsOpen;
+
+    header.classList.toggle("is-hidden", shouldHide);
+    lastScrollY = currentScrollY;
+  };
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      syncHeaderVisibility();
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("resize", () => {
+    header.classList.remove("is-hidden");
+    lastScrollY = window.scrollY;
+  });
+
+  syncHeaderVisibility();
 }
 
 const revealItems = document.querySelectorAll(".reveal");

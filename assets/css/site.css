@@ -130,6 +130,14 @@ img {
   background: var(--surface-strong);
   backdrop-filter: blur(20px);
   box-shadow: var(--shadow);
+  transition: transform 220ms ease, opacity 220ms ease, box-shadow 220ms ease;
+  will-change: transform, opacity;
+}
+
+.site-header.is-hidden {
+  transform: translateY(calc(-100% - 1.35rem));
+  opacity: 0;
+  pointer-events: none;
 }
 
 .brand {
