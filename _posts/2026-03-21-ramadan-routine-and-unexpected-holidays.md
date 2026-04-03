@@ -7,6 +7,10 @@ focus: "Discipline & Adaptability"
 location: "Campus and Online"
 excerpt: "Balancing fasting, quizzes, and a sudden shift to online learning became a lesson in resilience, planning, and flexibility."
 intro: "Ramadan already asked for discipline, and unexpected changes in the semester made that discipline even more important."
+filters:
+  - Challenges
+  - Resilience
+  - Growth
 ---
 The second semester coincided with my first Ramadan away from home, making it a unique period of personal growth and discipline. Maintaining a balanced daily routine became essential, as I attended classes, completed assignments, and observed fasting while participating in Tarawih prayers each evening. Planning study sessions around meals and prayer times taught me time management, patience, and the importance of consistency. I also advised juniors on maintaining a similar routine, which reinforced my own discipline and leadership skills.
 

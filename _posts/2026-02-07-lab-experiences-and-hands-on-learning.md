@@ -7,6 +7,10 @@ focus: "Labs & Practical Skills"
 location: "University Labs"
 excerpt: "Lab sessions turned classroom theory into practical skill, building confidence through coding, experiments, teamwork, and problem solving."
 intro: "Hands-on learning added energy and realism to the semester, showing how technical concepts come alive through practice."
+filters:
+  - Academics
+  - Challenges
+  - Growth
 ---
 One of the most exciting aspects of my first semester was experiencing the practical side of learning through university labs. My first Python lab involved installing Visual Studio and practicing basic coding exercises. It was fascinating to see theoretical concepts from class applied in real coding tasks. The structured lab environment taught me how to follow workflows, debug code, and manage time efficiently while completing assignments. These sessions not only improved my programming skills but also built confidence in handling technical tools independently.
 

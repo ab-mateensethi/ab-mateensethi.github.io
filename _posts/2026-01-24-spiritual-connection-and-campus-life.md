@@ -7,6 +7,9 @@ focus: "Faith & Community"
 location: "University Mosque"
 excerpt: "University life brought spiritual growth alongside social adjustment, creating a balance between worship, community, and academic responsibility."
 intro: "Some of the most grounding moments in university life came from spaces that offered both peace and belonging."
+filters:
+  - Growth
+  - Resilience
 ---
 Life at the university was not just about academics; it also provided opportunities to grow spiritually and socially. Visiting the university mosque for the first time was a memorable experience. The peaceful environment, the rhythm of prayers, and the sense of community created a feeling of connection with fellow students. Participating in regular prayers, including Tarawih during Ramadan, allowed me to maintain spiritual discipline even while living away from home. The mosque became not only a place for worship but also a space where students gathered, shared experiences, and supported one another in balancing spiritual and academic responsibilities.
 

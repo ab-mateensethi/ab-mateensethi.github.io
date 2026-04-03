@@ -7,6 +7,10 @@ focus: "Labs & Academic Setup"
 location: "Labs and Department"
 excerpt: "The early weeks of the semester combined new teachers, practical lab work, and important administrative tasks that demanded focus and organization."
 intro: "The second semester quickly moved from introductions into hands-on practice, reminding me that preparation matters most when it turns into action."
+filters:
+  - Academics
+  - Growth
+  - Transition
 ---
 The initial weeks of the second semester focused on familiarizing ourselves with new courses and gaining practical experience in labs. Meeting new teachers and attending course introductions helped set clear expectations for subjects like OOP in C#, Database Theory, and website development using WordPress. Teachers explained both theoretical foundations and practical applications, which motivated me to actively participate and build a strong understanding from the beginning.
 

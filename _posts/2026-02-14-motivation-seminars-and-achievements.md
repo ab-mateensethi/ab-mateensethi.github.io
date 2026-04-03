@@ -7,6 +7,10 @@ focus: "Mentorship & Achievement"
 location: "Campus and Home"
 excerpt: "Encouragement from teachers, exposure to industry speakers, and milestones like scholarship confirmation made this stage especially motivating."
 intro: "Sometimes progress feels strongest when effort, guidance, and opportunity begin to align at the same time."
+filters:
+  - Academics
+  - Future
+  - Growth
 ---
 The first semester was not only about academics and labs but also about motivation, learning from experts, and celebrating achievements. Teachers played an important role in inspiring students before tests, offering guidance and encouragement that helped reduce anxiety and focus on preparation. Their advice on study techniques, time management, and balancing coursework provided practical strategies to succeed. These moments of mentorship emphasized the importance of seeking guidance and learning from experienced individuals in shaping one’s academic journey.
 

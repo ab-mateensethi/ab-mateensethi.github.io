@@ -7,6 +7,11 @@ focus: "Projects & Reflection"
 location: "Home and Online Learning"
 excerpt: "The end of the semester blended festive Eid moments with online classes, technical project work, and a deeper appreciation for adaptability."
 intro: "This stage of the semester showed how celebration, responsibility, and long-term growth can exist together when discipline stays intact."
+filters:
+  - Academics
+  - Challenges
+  - Future
+  - Resilience
 ---
 The end of the second semester brought a mix of academic responsibilities and festive excitement. Eid holidays were a time of joy, but with pending quizzes and assignments, balancing celebration and studies became essential. Online classes via Google Meet and Zoom allowed me to continue learning from home, though occasional network issues presented minor challenges. Staying disciplined during this period ensured that I completed assignments on time and retained a strong understanding of course concepts, demonstrating the importance of adaptability and self-motivation.
 

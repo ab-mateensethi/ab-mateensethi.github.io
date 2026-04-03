@@ -7,6 +7,10 @@ focus: "Arrival & Hostel Life"
 location: "Dina to Faisalabad"
 excerpt: "The move from Dina to Faisalabad marked the beginning of university life, filled with new routines, fresh responsibility, and a strong sense of possibility."
 intro: "The journey to university was more than travel. It was the beginning of independence, adjustment, and the first real step into a new chapter of life."
+filters:
+  - Admissions
+  - Beginnings
+  - Transition
 ---
 Traveling from my hometown of Dina to Faisalabad for university admission was an experience full of excitement and anticipation. The journey gave me time to reflect on the new phase of life I was about to enter. Upon reaching the university, I first explored the campus and checked into my assigned hostel. The hostel room was small but comfortable, and it quickly became my personal space for study and rest. Walking around the campus, I noticed the lively environment with students moving between classes, creating an atmosphere that felt both motivating and welcoming.
 

@@ -7,6 +7,10 @@ focus: "Projects & Campus Life"
 location: "Department and Sports Festival"
 excerpt: "Academic projects, sports participation, and Ramadan routines combined to create one of the most balanced and memorable periods of the semester."
 intro: "University life feels richest when technical growth, teamwork, and personal discipline all move forward together."
+filters:
+  - Academics
+  - Future
+  - Growth
 ---
 The second semester offered a balance of academic projects, extracurricular activities, and personal growth. In the database course, I worked on practical projects that involved training a machine learning model, deploying it on GitHub, and preparing a portfolio. These assignments allowed me to apply theoretical knowledge to real-world tasks, improving my technical skills, problem-solving abilities, and confidence in handling complex projects independently. Working in a structured environment with deadlines also taught time management and planning skills.
 

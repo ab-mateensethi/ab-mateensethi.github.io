@@ -7,6 +7,10 @@ focus: "Orientation & Academic Start"
 location: "Department and Campus"
 excerpt: "Orientation week helped transform uncertainty into clarity by introducing the campus, the department, and the expectations of university life."
 intro: "The first week of orientation became an important bridge between school life and the structure of university."
+filters:
+  - Admissions
+  - Academics
+  - Beginnings
 ---
 The first week at university was focused on orientation, which played a crucial role in understanding the campus, department, and academic expectations. During orientation, the chairman and department heads introduced us to university policies, rules, and facilities. They emphasized the importance of discipline, time management, and active participation in both academic and extracurricular activities. Seniors also continued to guide us, sharing personal experiences, tips for success, and advice on managing coursework effectively. Their mentorship created a supportive environment where juniors felt welcomed and prepared for the challenges ahead.
 

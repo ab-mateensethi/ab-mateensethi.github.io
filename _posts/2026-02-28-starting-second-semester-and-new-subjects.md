@@ -7,6 +7,10 @@ focus: "Fresh Start & Mentorship"
 location: "Hostel and Campus"
 excerpt: "The second semester began with renewed confidence, new subjects, and an opportunity to support juniors as I became more settled in university life."
 intro: "Returning for a new semester felt different. Familiarity created confidence, and that confidence made space for leadership and fresh curiosity."
+filters:
+  - Beginnings
+  - Transition
+  - Future
 ---
 Returning to university for the second semester felt like a fresh start, filled with excitement and confidence gained from the previous experience. The campus seemed familiar yet renewed with the arrival of new students and the changing semester energy. Settling into the hostel again, I welcomed spring admission juniors as roommates and guided them through hostel routines, courses, and campus resources. This mentorship not only helped them adjust quickly but also strengthened my leadership and interpersonal skills.
 

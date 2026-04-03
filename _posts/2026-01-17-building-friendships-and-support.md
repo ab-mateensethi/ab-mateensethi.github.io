@@ -7,6 +7,9 @@ focus: "Friendship & Belonging"
 location: "Hostel and Campus"
 excerpt: "The first week of university showed how small conversations, shared meals, and mutual support could grow into lasting friendships."
 intro: "Adjustment becomes easier when the people around you are learning, struggling, and growing alongside you."
+filters:
+  - Beginnings
+  - Growth
 ---
 The first days in university were not only about adjusting to a new environment but also about building meaningful relationships with peers. Meeting my roommates for the first time was an important step. We exchanged introductions, shared our backgrounds, and discussed expectations for hostel life. These initial interactions helped break the ice and created a sense of comfort, as everyone was in the same position of adjusting to a new routine. Over time, we started bonding over shared experiences, from managing daily tasks to discussing academic concerns, which gradually developed into supportive friendships.
 

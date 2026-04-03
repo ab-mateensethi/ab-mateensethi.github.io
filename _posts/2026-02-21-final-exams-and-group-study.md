@@ -7,6 +7,10 @@ focus: "Exams & Teamwork"
 location: "Computer Engineering Department"
 excerpt: "Final exams tested not just subject knowledge, but also discipline, time management, teamwork, and the value of studying together."
 intro: "The end of the semester demanded more focus, but it also revealed how powerful structured preparation and group learning can be."
+filters:
+  - Academics
+  - Confidence
+  - Resilience
 ---
 As the first semester progressed, the complexity of courses increased and preparing for final exams became the primary focus. Python introduced advanced libraries and topics that required consistent practice, while Applied Physics experiments demanded careful planning, precise execution, and the ability to connect theory with real-world applications. The growing workload challenged me to prioritize tasks, manage time efficiently, and maintain focus on learning rather than just completing assignments.
 

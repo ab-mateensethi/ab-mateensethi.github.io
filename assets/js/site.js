@@ -70,6 +70,10 @@ if (navButton && nav) {
 }
 
 const revealItems = document.querySelectorAll(".reveal");
+const filterButtons = document.querySelectorAll("[data-filter]");
+const filterCards = document.querySelectorAll("[data-filter-card]");
+const filterState = document.querySelector("[data-filter-state]");
+const filterEmpty = document.querySelector("[data-filter-empty]");
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
@@ -90,4 +94,54 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => observer.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+if (filterButtons.length && filterCards.length) {
+  const updateFilters = (selectedFilter) => {
+    let visibleCount = 0;
+    let selectedLabel = "All";
+
+    filterButtons.forEach((button) => {
+      const isActive = button.dataset.filter === selectedFilter;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+
+      if (isActive) {
+        selectedLabel = button.textContent.trim();
+      }
+    });
+
+    filterCards.forEach((card) => {
+      const filters = (card.dataset.filters || "")
+        .split("|")
+        .map((filter) => filter.trim())
+        .filter(Boolean);
+      const isMatch = selectedFilter === "all" || filters.includes(selectedFilter);
+
+      card.hidden = !isMatch;
+
+      if (isMatch) {
+        visibleCount += 1;
+      }
+    });
+
+    if (filterState) {
+      filterState.textContent =
+        selectedFilter === "all"
+          ? `Showing all ${visibleCount} chapters in chronological order.`
+          : `Showing ${visibleCount} chapter${visibleCount === 1 ? "" : "s"} for ${selectedLabel}.`;
+    }
+
+    if (filterEmpty) {
+      filterEmpty.hidden = visibleCount !== 0;
+    }
+  };
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      updateFilters(button.dataset.filter);
+    });
+  });
+
+  updateFilters("all");
 }
