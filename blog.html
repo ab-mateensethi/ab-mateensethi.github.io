@@ -1,0 +1,36 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+description: Browse the university journal and personal blog posts of Ab Mateen Sethi.
+body_class: blog-page
+---
+<section class="page-intro reveal">
+  <div class="eyebrow">Blog</div>
+  <h1>University Journal</h1>
+  <p class="lead">This section collects the full journey in one place. Every post is listed here, and each title opens into its own dedicated page for complete reading.</p>
+  <div class="meta-cluster">
+    <span class="badge">{{ site.posts | size }} Articles</span>
+    <span class="badge">Jekyll-powered archive</span>
+    <span class="badge">Full post pages</span>
+  </div>
+</section>
+
+<section class="post-list">
+  {% for post in site.posts %}
+    <article class="post-card reveal">
+      <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <div class="post-labels">
+        {% if post.phase %}
+          <span class="badge">{{ post.phase }}</span>
+        {% endif %}
+        {% if post.focus %}
+          <span class="badge">{{ post.focus }}</span>
+        {% endif %}
+      </div>
+      <p>{{ post.excerpt | strip_html | truncate: 170 }}</p>
+      <a class="text-link" href="{{ post.url | relative_url }}">Read the full post</a>
+    </article>
+  {% endfor %}
+</section>
