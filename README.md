@@ -42,6 +42,8 @@ My goal is to continuously learn, improve my technical skills and share my journ
  📬 Connect With Me
 
 If you want to connect, collaborate or share feedback, feel free to reach out through my GitHub profile.
+Author: Abdul Mateen
+Connect on GitHub: [github.com/abmateensethi] (https://github.com/abmateensethi)
 
 ⭐ Thank you for visiting my portfolio!
 
