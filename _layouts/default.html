@@ -48,7 +48,12 @@
         <div class="header-actions">
           <div class="mode-menu">
             <button class="mode-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mode-options">
-              <span>Mode</span>
+              <span class="action-icon-shell" aria-hidden="true">
+                <svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3.5a.75.75 0 0 1 .75.75v1.4a.75.75 0 0 1-1.5 0v-1.4A.75.75 0 0 1 12 3.5Zm0 14.85a.75.75 0 0 1 .75.75v1.4a.75.75 0 0 1-1.5 0v-1.4a.75.75 0 0 1 .75-.75Zm8.5-7.1a.75.75 0 0 1 0 1.5h-1.4a.75.75 0 0 1 0-1.5h1.4Zm-14.85 0a.75.75 0 0 1 0 1.5h-1.4a.75.75 0 0 1 0-1.5h1.4Zm11.28-5.33a.75.75 0 0 1 1.06 1.06L17 8.03a.75.75 0 1 1-1.06-1.06l.97-.97Zm-9.86 9.86a.75.75 0 0 1 1.06 1.06l-.97.97a.75.75 0 1 1-1.06-1.06l.97-.97Zm9.83 1.03a.75.75 0 0 1 0 1.06.75.75 0 0 1-1.06 0l-.97-.97a.75.75 0 1 1 1.06-1.06l.97.97Zm-9.83-9.83a.75.75 0 0 1 0 1.06.75.75 0 0 1-1.06 0l-.97-.97a.75.75 0 1 1 1.06-1.06l.97.97ZM12 7.2a4.8 4.8 0 1 0 0 9.6a4.8 4.8 0 0 0 0-9.6Z"/>
+                </svg>
+              </span>
+              <span class="action-label">Mode</span>
               <span class="mode-caret" aria-hidden="true"></span>
             </button>
             <div id="mode-options" class="mode-options" hidden>
@@ -58,10 +63,12 @@
           </div>
 
           <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="nav-toggle-label">Menu</span>
+            <span class="nav-toggle-glyph" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="action-label nav-toggle-label">Menu</span>
           </button>
         </div>
       </header>

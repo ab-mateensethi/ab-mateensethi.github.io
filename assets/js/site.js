@@ -32,6 +32,11 @@ if (!root.getAttribute("data-theme")) {
 if (modeToggle && modeOptions) {
   modeToggle.addEventListener("click", () => {
     const isOpen = !modeOptions.hasAttribute("hidden");
+    if (nav && nav.classList.contains("is-open")) {
+      nav.classList.remove("is-open");
+      navButton?.classList.remove("is-active");
+      navButton?.setAttribute("aria-expanded", "false");
+    }
     modeOptions.toggleAttribute("hidden");
     modeToggle.setAttribute("aria-expanded", String(!isOpen));
   });
@@ -61,13 +66,19 @@ if (modeToggle && modeOptions) {
 
 if (navButton && nav) {
   navButton.addEventListener("click", () => {
+    if (modeOptions && !modeOptions.hasAttribute("hidden")) {
+      modeOptions.setAttribute("hidden", "");
+      modeToggle?.setAttribute("aria-expanded", "false");
+    }
     const isOpen = nav.classList.toggle("is-open");
+    navButton.classList.toggle("is-active", isOpen);
     navButton.setAttribute("aria-expanded", String(isOpen));
   });
 
   nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("is-open");
+      navButton.classList.remove("is-active");
       navButton.setAttribute("aria-expanded", "false");
     });
   });
