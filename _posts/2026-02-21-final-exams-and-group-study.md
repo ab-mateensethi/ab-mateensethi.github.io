@@ -14,7 +14,7 @@ cover_subtitle: "Study groups, final preparation and a strong GPA marked the tur
 cover_note: "A visual marker for the rigorous exam phase of the Computer Engineering journey, defined by preparation, collaboration and academic confidence."
 filters:
   - Academics
-  - Confidence
+  - Achievements
   - Resilience
 ---
 As the first semester progressed, the complexity of courses increased and preparing for final exams became the primary focus. Python introduced advanced libraries and topics that required consistent practice, while Applied Physics experiments demanded careful planning, precise execution and the ability to connect theory with real-world applications. The growing workload challenged me to prioritize tasks, manage time efficiently and maintain focus on learning rather than just completing assignments.
