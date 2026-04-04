@@ -8,6 +8,9 @@ const modeMenu = document.querySelector(".mode-menu");
 const modeToggle = document.querySelector(".mode-toggle");
 const modeOptions = document.querySelector(".mode-options");
 const modeButtons = document.querySelectorAll(".mode-option");
+const avatarTrigger = document.querySelector("[data-avatar-trigger]");
+const avatarModal = document.querySelector("[data-avatar-modal]");
+const avatarCloseControls = document.querySelectorAll("[data-avatar-close]");
 
 const setTheme = (theme) => {
   root.setAttribute("data-theme", theme);
@@ -97,6 +100,29 @@ if (header) {
   });
 
   syncHeaderVisibility();
+}
+
+if (avatarTrigger && avatarModal) {
+  const toggleAvatarModal = (isOpen) => {
+    avatarModal.toggleAttribute("hidden", !isOpen);
+    document.body.classList.toggle("modal-open", isOpen);
+  };
+
+  avatarTrigger.addEventListener("click", () => {
+    toggleAvatarModal(true);
+  });
+
+  avatarCloseControls.forEach((control) => {
+    control.addEventListener("click", () => {
+      toggleAvatarModal(false);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !avatarModal.hasAttribute("hidden")) {
+      toggleAvatarModal(false);
+    }
+  });
 }
 
 const revealItems = document.querySelectorAll(".reveal");

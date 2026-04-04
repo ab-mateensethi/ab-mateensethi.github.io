@@ -68,6 +68,10 @@ body {
   transition: background-color 220ms ease, color 220ms ease;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 body::before,
 body::after {
   content: "";
@@ -140,10 +144,16 @@ img {
   pointer-events: none;
 }
 
-.brand {
+.brand-shell {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
+  min-width: 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
   min-width: 0;
 }
 
@@ -157,6 +167,23 @@ img {
   box-shadow: 0 12px 24px rgba(20, 31, 51, 0.18);
 }
 
+.brand-avatar-button {
+  border: 0;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.brand-avatar-button:hover,
+.brand-avatar-button:focus-visible {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 16px 28px rgba(20, 31, 51, 0.24);
+}
+
+.brand-avatar-button:focus-visible {
+  outline: 2px solid rgba(49, 91, 140, 0.45);
+  outline-offset: 3px;
+}
+
 .brand-avatar img {
   width: 100%;
   height: 100%;
@@ -164,6 +191,64 @@ img {
   object-fit: cover;
   object-position: center top;
   display: block;
+}
+
+.avatar-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+}
+
+.avatar-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 10, 18, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.avatar-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 640px);
+  padding: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 32px;
+  background: rgba(13, 20, 31, 0.92);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.45);
+}
+
+.avatar-modal-image {
+  display: block;
+  width: 100%;
+  max-height: min(78vh, 760px);
+  border-radius: 24px;
+  object-fit: contain;
+}
+
+.avatar-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.35rem;
+  line-height: 1;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.avatar-modal-close:hover,
+.avatar-modal-close:focus-visible {
+  background: rgba(255, 255, 255, 0.22);
+  transform: scale(1.04);
 }
 
 .brand-text {
@@ -1379,6 +1464,10 @@ html[data-theme="dark"] .contact-field textarea {
     justify-content: center;
   }
 
+  .brand-shell {
+    max-width: calc(100vw - 8rem);
+  }
+
   .mode-options {
     min-width: 100%;
   }
@@ -1450,6 +1539,16 @@ html[data-theme="dark"] .contact-field textarea {
   .brand-avatar {
     width: 2.65rem;
     height: 2.65rem;
+  }
+
+  .avatar-modal-panel {
+    width: min(94vw, 560px);
+    padding: 0.75rem;
+    border-radius: 24px;
+  }
+
+  .avatar-modal-image {
+    border-radius: 18px;
   }
 
   .journal-cover-title {

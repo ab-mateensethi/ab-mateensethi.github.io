@@ -24,15 +24,17 @@
   <body class="{{ page.body_class | default: 'site-page' }}">
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="{{ '/' | relative_url }}">
-          <span class="brand-avatar">
+        <div class="brand-shell">
+          <button class="brand-avatar brand-avatar-button" type="button" data-avatar-trigger aria-label="Open profile picture preview">
             <img src="{{ '/assets/images/profile/header-avatar.jpeg' | relative_url }}" alt="Profile picture of Abdul Mateen">
-          </span>
+          </button>
+          <a class="brand" href="{{ '/' | relative_url }}">
           <span class="brand-text">
             <strong>Abdul Mateen Chronicles</strong>
             <small>Computer Engineering Learner</small>
           </span>
-        </a>
+          </a>
+        </div>
 
         <div class="header-center">
           <nav id="site-nav" class="site-nav" aria-label="Primary">
@@ -104,6 +106,14 @@
           <p class="footer-meta">&copy; 2026 Abdul's Portfolio</p>
         </div>
       </footer>
+    </div>
+
+    <div class="avatar-modal" data-avatar-modal hidden>
+      <div class="avatar-modal-backdrop" data-avatar-close></div>
+      <div class="avatar-modal-panel" role="dialog" aria-modal="true" aria-label="Profile picture preview">
+        <button class="avatar-modal-close" type="button" data-avatar-close aria-label="Close profile picture preview">&times;</button>
+        <img class="avatar-modal-image" src="{{ '/assets/images/profile/header-avatar.jpeg' | relative_url }}" alt="Profile picture of Abdul Mateen">
+      </div>
     </div>
 
     <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
