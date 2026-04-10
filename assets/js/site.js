@@ -11,6 +11,21 @@ const modeButtons = document.querySelectorAll(".mode-option");
 const avatarTrigger = document.querySelector("[data-avatar-trigger]");
 const avatarModal = document.querySelector("[data-avatar-modal]");
 const avatarCloseControls = document.querySelectorAll("[data-avatar-close]");
+const galleryTriggers = document.querySelectorAll("[data-gallery-trigger]");
+const galleryModal = document.querySelector("[data-gallery-modal]");
+const galleryCloseControls = document.querySelectorAll("[data-gallery-close]");
+const galleryModalTitle = document.querySelector("[data-gallery-title]");
+const galleryCounter = document.querySelector("[data-gallery-counter]");
+const galleryImage = document.querySelector("[data-gallery-image]");
+const galleryCaption = document.querySelector("[data-gallery-caption]");
+const galleryThumbs = document.querySelector("[data-gallery-thumbs]");
+const galleryPrev = document.querySelector("[data-gallery-prev]");
+const galleryNext = document.querySelector("[data-gallery-next]");
+
+let activeGalleryItems = [];
+let activeGalleryTitle = "";
+let activeGalleryIndex = 0;
+let lastGalleryTrigger = null;
 
 const setTheme = (theme) => {
   root.setAttribute("data-theme", theme);
@@ -21,6 +36,13 @@ const setTheme = (theme) => {
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
+};
+
+const syncBodyModalState = () => {
+  const avatarIsOpen = avatarModal && !avatarModal.hasAttribute("hidden");
+  const galleryIsOpen = galleryModal && !galleryModal.hasAttribute("hidden");
+
+  document.body.classList.toggle("modal-open", Boolean(avatarIsOpen || galleryIsOpen));
 };
 
 if (!root.getAttribute("data-theme")) {
@@ -116,7 +138,7 @@ if (header) {
 if (avatarTrigger && avatarModal) {
   const toggleAvatarModal = (isOpen) => {
     avatarModal.toggleAttribute("hidden", !isOpen);
-    document.body.classList.toggle("modal-open", isOpen);
+    syncBodyModalState();
   };
 
   avatarTrigger.addEventListener("click", () => {
@@ -136,13 +158,154 @@ if (avatarTrigger && avatarModal) {
   });
 }
 
+if (galleryModal && galleryImage && galleryThumbs && galleryModalTitle && galleryCounter && galleryCaption) {
+  const parseGalleryItems = (trigger) => {
+    const images = (trigger.dataset.galleryImages || "")
+      .split("|")
+      .map((item) => item.trim())
+      .filter(Boolean);
+    const captions = (trigger.dataset.galleryCaptions || "")
+      .split("|")
+      .map((item) => item.trim());
+
+    return images.map((src, index) => ({
+      src,
+      caption: captions[index] || `Preview image ${index + 1}`
+    }));
+  };
+
+  const syncGalleryControls = () => {
+    const hasMultipleImages = activeGalleryItems.length > 1;
+
+    galleryPrev?.toggleAttribute("hidden", !hasMultipleImages);
+    galleryNext?.toggleAttribute("hidden", !hasMultipleImages);
+    galleryThumbs.toggleAttribute("hidden", !hasMultipleImages);
+    galleryCounter.textContent = hasMultipleImages ? `${activeGalleryIndex + 1} / ${activeGalleryItems.length}` : "";
+  };
+
+  const renderGallery = () => {
+    const currentItem = activeGalleryItems[activeGalleryIndex];
+
+    if (!currentItem) {
+      return;
+    }
+
+    galleryModalTitle.textContent = activeGalleryTitle || "Gallery Preview";
+    galleryImage.src = currentItem.src;
+    galleryImage.alt = currentItem.caption;
+    galleryCaption.textContent = currentItem.caption;
+
+    galleryThumbs.querySelectorAll(".gallery-thumb").forEach((thumb, index) => {
+      const isActive = index === activeGalleryIndex;
+      thumb.classList.toggle("is-active", isActive);
+      thumb.setAttribute("aria-pressed", String(isActive));
+    });
+
+    syncGalleryControls();
+  };
+
+  const setGalleryIndex = (nextIndex) => {
+    if (!activeGalleryItems.length) {
+      return;
+    }
+
+    const total = activeGalleryItems.length;
+    activeGalleryIndex = (nextIndex + total) % total;
+    renderGallery();
+  };
+
+  const closeGallery = () => {
+    galleryModal.setAttribute("hidden", "");
+    syncBodyModalState();
+
+    if (lastGalleryTrigger) {
+      lastGalleryTrigger.focus();
+    }
+  };
+
+  const openGallery = (trigger) => {
+    const items = parseGalleryItems(trigger);
+
+    if (!items.length) {
+      return;
+    }
+
+    activeGalleryItems = items;
+    activeGalleryTitle = (trigger.dataset.galleryTitle || "").trim();
+    activeGalleryIndex = 0;
+    lastGalleryTrigger = trigger;
+    galleryThumbs.innerHTML = "";
+
+    activeGalleryItems.forEach((item, index) => {
+      const thumb = document.createElement("button");
+      const thumbImage = document.createElement("img");
+
+      thumb.type = "button";
+      thumb.className = "gallery-thumb";
+      thumb.dataset.index = String(index);
+      thumb.setAttribute("aria-label", `Show image ${index + 1}`);
+
+      thumbImage.src = item.src;
+      thumbImage.alt = item.caption;
+      thumb.appendChild(thumbImage);
+
+      thumb.addEventListener("click", () => {
+        setGalleryIndex(index);
+      });
+
+      galleryThumbs.appendChild(thumb);
+    });
+
+    renderGallery();
+    galleryModal.removeAttribute("hidden");
+    syncBodyModalState();
+  };
+
+  galleryTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      openGallery(trigger);
+    });
+  });
+
+  galleryCloseControls.forEach((control) => {
+    control.addEventListener("click", () => {
+      closeGallery();
+    });
+  });
+
+  galleryPrev?.addEventListener("click", () => {
+    setGalleryIndex(activeGalleryIndex - 1);
+  });
+
+  galleryNext?.addEventListener("click", () => {
+    setGalleryIndex(activeGalleryIndex + 1);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (galleryModal.hasAttribute("hidden")) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeGallery();
+    }
+
+    if (event.key === "ArrowLeft") {
+      setGalleryIndex(activeGalleryIndex - 1);
+    }
+
+    if (event.key === "ArrowRight") {
+      setGalleryIndex(activeGalleryIndex + 1);
+    }
+  });
+}
+
 const revealItems = document.querySelectorAll(".reveal");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const filterCards = document.querySelectorAll("[data-filter-card]");
 const filterState = document.querySelector("[data-filter-state]");
 const filterEmpty = document.querySelector("[data-filter-empty]");
 const contactForm = document.querySelector("[data-contact-form]");
-const wordCount = document.querySelector("[data-word-count]");
 const contactStatus = document.querySelector("[data-contact-status]");
 
 if ("IntersectionObserver" in window) {
@@ -231,11 +394,6 @@ if (contactForm) {
     const words = countWords(messageField.value);
     const isWithinLimit = words <= 500;
 
-    if (wordCount) {
-      wordCount.textContent = `${words} / 500 words`;
-      wordCount.classList.toggle("is-over-limit", !isWithinLimit);
-    }
-
     if (contactStatus && words === 0) {
       contactStatus.textContent = "";
       delete contactStatus.dataset.state;
@@ -257,7 +415,7 @@ if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const { words, isWithinLimit } = syncWordCount();
+    const { isWithinLimit } = syncWordCount();
 
     if (!isWithinLimit) {
       messageField.focus();
@@ -277,15 +435,7 @@ if (contactForm) {
     }
 
     const subject = `Inquiry from ${name} via Abdul Mateen Chronicles`;
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      "",
-      "Message:",
-      message,
-      "",
-      `Word Count: ${words}`
-    ].join("\n");
+    const body = [`Name: ${name}`, `Email: ${email}`, "", "Message:", message].join("\n");
 
     if (contactStatus) {
       contactStatus.textContent = "Opening your email draft for review.";
