@@ -1,0 +1,14 @@
+<div class="article-gallery-callout">
+  <button
+    class="preview-gallery-pill"
+    type="button"
+    data-gallery-trigger
+    data-gallery-title="{{ include.title | escape }}"
+    data-gallery-images="{{ include.images | escape }}"
+    {% if include.captions %}data-gallery-captions="{{ include.captions | escape }}"{% endif %}
+    aria-label="{{ include.label | default: 'Preview Image' | escape }} for {{ include.title | escape }}"
+  >
+    <span>{{ include.label | default: "Preview Image" }}</span>
+    <span class="preview-gallery-pill-icon" aria-hidden="true"></span>
+  </button>
+</div>
