@@ -33,7 +33,7 @@ body_class: blog-page
     <button class="filter-pill" type="button" data-filter="resilience" aria-pressed="false">Resilience</button>
     <button class="filter-pill" type="button" data-filter="transition" aria-pressed="false">Transition</button>
   </div>
-  <p class="filter-state" data-filter-state>Showing all {{ site.posts | size }} chapters in chronological order.</p>
+  <p class="filter-state" data-filter-state>Showing all chapters in chronological order.</p>
 </section>
 
 {% assign sorted_posts = site.posts | sort: "date" %}

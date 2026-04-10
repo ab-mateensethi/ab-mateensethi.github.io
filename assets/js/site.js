@@ -23,7 +23,6 @@ const galleryPrev = document.querySelector("[data-gallery-prev]");
 const galleryNext = document.querySelector("[data-gallery-next]");
 
 let activeGalleryItems = [];
-let activeGalleryTitle = "";
 let activeGalleryIndex = 0;
 let lastGalleryTrigger = null;
 
@@ -185,12 +184,13 @@ if (galleryModal && galleryImage && galleryThumbs && galleryModalTitle && galler
 
   const renderGallery = () => {
     const currentItem = activeGalleryItems[activeGalleryIndex];
+    const hasMultipleImages = activeGalleryItems.length > 1;
 
     if (!currentItem) {
       return;
     }
 
-    galleryModalTitle.textContent = activeGalleryTitle || "Gallery Preview";
+    galleryModalTitle.textContent = hasMultipleImages ? "Preview Images" : "Preview Image";
     galleryImage.src = currentItem.src;
     galleryImage.alt = currentItem.caption;
     galleryCaption.textContent = currentItem.caption;
@@ -231,7 +231,6 @@ if (galleryModal && galleryImage && galleryThumbs && galleryModalTitle && galler
     }
 
     activeGalleryItems = items;
-    activeGalleryTitle = (trigger.dataset.galleryTitle || "").trim();
     activeGalleryIndex = 0;
     lastGalleryTrigger = trigger;
     galleryThumbs.innerHTML = "";
@@ -361,7 +360,7 @@ if (filterButtons.length && filterCards.length) {
     if (filterState) {
       filterState.textContent =
         selectedFilter === "all"
-          ? `Showing all ${visibleCount} chapters in chronological order.`
+          ? "Showing all chapters in chronological order."
           : `Showing ${visibleCount} chapter${visibleCount === 1 ? "" : "s"} for ${selectedLabel}.`;
     }
 
