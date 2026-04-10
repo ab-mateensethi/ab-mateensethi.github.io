@@ -109,6 +109,14 @@
               </span>
               <span class="social-name">Threads</span>
             </a>
+            <a class="social-tile linkedin" href="https://www.linkedin.com/in/abdul-mateen-a03696392?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <span class="social-badge">
+                <svg class="social-icon linkedin-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.56c0-1.08-.81-1.94-1.91-1.94c-1.09 0-1.91.86-1.91 1.94c0 1.07.81 1.94 1.88 1.94h.03c1.12 0 1.91-.87 1.91-1.94ZM20.5 13.02c0-3.48-1.86-5.1-4.34-5.1c-2 0-2.9 1.1-3.4 1.87V8.5H9.38c.04.86 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92c.28-.68.92-1.39 1.99-1.39c1.4 0 1.96 1.05 1.96 2.59V20h3.38v-6.98Z"/>
+                </svg>
+              </span>
+              <span class="social-name">LinkedIn</span>
+            </a>
           </div>
           <p class="footer-meta">&copy; 2026 Abdul's Portfolio</p>
         </div>
@@ -120,6 +128,33 @@
       <div class="avatar-modal-panel" role="dialog" aria-modal="true" aria-label="Profile picture preview">
         <button class="avatar-modal-close" type="button" data-avatar-close aria-label="Close profile picture preview">&times;</button>
         <img class="avatar-modal-image" src="{{ '/assets/images/profile/header-avatar.jpeg' | relative_url }}" alt="Profile picture of Abdul Mateen">
+      </div>
+    </div>
+
+    <div class="gallery-modal" data-gallery-modal hidden>
+      <div class="gallery-modal-backdrop" data-gallery-close></div>
+      <div class="gallery-modal-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
+        <button class="gallery-modal-close" type="button" data-gallery-close aria-label="Close image preview">&times;</button>
+        <div class="gallery-modal-header">
+          <div>
+            <p class="gallery-modal-kicker">Image Preview</p>
+            <h2 id="gallery-modal-title" class="gallery-modal-title" data-gallery-title>Gallery Preview</h2>
+          </div>
+          <p class="gallery-modal-counter" data-gallery-counter></p>
+        </div>
+        <div class="gallery-modal-stage">
+          <button class="gallery-modal-nav" type="button" data-gallery-prev aria-label="Show previous image">
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+          <div class="gallery-modal-figure">
+            <img class="gallery-modal-image" data-gallery-image src="" alt="">
+          </div>
+          <button class="gallery-modal-nav" type="button" data-gallery-next aria-label="Show next image">
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+        <p class="gallery-modal-caption" data-gallery-caption></p>
+        <div class="gallery-modal-thumbs" data-gallery-thumbs></div>
       </div>
     </div>
 
