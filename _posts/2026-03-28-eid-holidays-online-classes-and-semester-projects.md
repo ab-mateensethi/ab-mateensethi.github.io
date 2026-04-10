@@ -6,8 +6,8 @@ date: 2026-03-28 09:00:00 +0500
 phase: "Second Semester"
 focus: "Projects & Reflection"
 location: "Home and Online Learning"
-excerpt: "The end of the semester blended festive Eid moments with online classes, technical project work, and a deeper appreciation for adaptability."
-intro: "This stage of the semester showed how celebration, responsibility, and long-term growth can exist together when discipline stays intact."
+excerpt: "The end of the semester blended festive Eid moments with online classes, technical project work and a deeper appreciation for adaptability."
+intro: "This stage of the semester showed how celebration, responsibility and long-term growth can exist together when discipline stays intact."
 cover_theme: "future"
 cover_image: "/assets/images/journal/article-12.jpeg"
 filters:
