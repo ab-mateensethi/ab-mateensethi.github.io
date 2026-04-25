@@ -301,8 +301,10 @@ if (galleryModal && galleryImage && galleryThumbs && galleryModalTitle && galler
 
 const revealItems = document.querySelectorAll(".reveal");
 const filterButtons = document.querySelectorAll("[data-filter]");
+const semesterFilterButtons = document.querySelectorAll("[data-semester-filter]");
 const filterCards = document.querySelectorAll("[data-filter-card]");
 const filterState = document.querySelector("[data-filter-state]");
+const semesterFilterState = document.querySelector("[data-semester-filter-state]");
 const filterEmpty = document.querySelector("[data-filter-empty]");
 const contactForm = document.querySelector("[data-contact-form]");
 const contactStatus = document.querySelector("[data-contact-status]");
@@ -328,10 +330,14 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
-if (filterButtons.length && filterCards.length) {
-  const updateFilters = (selectedFilter) => {
+if ((filterButtons.length || semesterFilterButtons.length) && filterCards.length) {
+  let selectedFilter = "all";
+  let selectedSemester = "all";
+
+  const updateFilters = () => {
     let visibleCount = 0;
     let selectedLabel = "All";
+    let selectedSemesterLabel = "All Semesters";
 
     filterButtons.forEach((button) => {
       const isActive = button.dataset.filter === selectedFilter;
@@ -343,12 +349,25 @@ if (filterButtons.length && filterCards.length) {
       }
     });
 
+    semesterFilterButtons.forEach((button) => {
+      const isActive = button.dataset.semesterFilter === selectedSemester;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+
+      if (isActive) {
+        selectedSemesterLabel = button.textContent.trim();
+      }
+    });
+
     filterCards.forEach((card) => {
       const filters = (card.dataset.filters || "")
         .split("|")
         .map((filter) => filter.trim())
         .filter(Boolean);
-      const isMatch = selectedFilter === "all" || filters.includes(selectedFilter);
+      const semester = (card.dataset.semester || "").trim();
+      const matchesFilter = selectedFilter === "all" || filters.includes(selectedFilter);
+      const matchesSemester = selectedSemester === "all" || semester === selectedSemester;
+      const isMatch = matchesFilter && matchesSemester;
 
       card.hidden = !isMatch;
 
@@ -364,6 +383,13 @@ if (filterButtons.length && filterCards.length) {
           : `Showing ${visibleCount} chapter${visibleCount === 1 ? "" : "s"} for ${selectedLabel}.`;
     }
 
+    if (semesterFilterState) {
+      semesterFilterState.textContent =
+        selectedSemester === "all"
+          ? "Showing all chapters across every semester."
+          : `Showing ${visibleCount} chapter${visibleCount === 1 ? "" : "s"} from ${selectedSemesterLabel}.`;
+    }
+
     if (filterEmpty) {
       filterEmpty.hidden = visibleCount !== 0;
     }
@@ -371,11 +397,19 @@ if (filterButtons.length && filterCards.length) {
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      updateFilters(button.dataset.filter);
+      selectedFilter = button.dataset.filter;
+      updateFilters();
     });
   });
 
-  updateFilters("all");
+  semesterFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedSemester = selectedSemester === button.dataset.semesterFilter ? "all" : button.dataset.semesterFilter;
+      updateFilters();
+    });
+  });
+
+  updateFilters();
 }
 
 if (contactForm) {

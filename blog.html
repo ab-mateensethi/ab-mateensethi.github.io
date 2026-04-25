@@ -36,10 +36,21 @@ body_class: blog-page
   <p class="filter-state" data-filter-state>Showing all chapters in chronological order.</p>
 </section>
 
+<section class="section-card reveal filter-panel">
+  <div class="eyebrow">SEMESTER EXPLORATION</div>
+  <h2>Follow the Journey by Academic Semester</h2>
+  <p class="lead">Explore the journal through the natural rhythm of university life. These semester filters let you revisit the foundations of Semester 1 or jump directly into the deeper momentum of Semester 2 while keeping every chapter neatly organized.</p>
+  <div class="filter-pills" aria-label="Semester content filters">
+    <button class="filter-pill" type="button" data-semester-filter="first-semester" aria-pressed="false">Semester 1</button>
+    <button class="filter-pill" type="button" data-semester-filter="second-semester" aria-pressed="false">Semester 2</button>
+  </div>
+  <p class="filter-state" data-semester-filter-state>Showing all chapters across every semester.</p>
+</section>
+
 {% assign sorted_posts = site.posts | sort: "date" %}
 <section class="post-list filtered-post-list">
   {% for post in sorted_posts %}
-    <article class="post-card reveal filter-card" data-filter-card data-filters="{{ post.filters | join: '|' | downcase }}">
+    <article class="post-card reveal filter-card" data-filter-card data-article-number="{{ post.article_number }}" data-semester="{{ post.phase | downcase | replace: ' ', '-' }}" data-filters="{{ post.filters | join: '|' | downcase }}">
       {% include post-cover.html post=post context="listing" %}
       <p class="post-meta">Article {{ post.article_number }}</p>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>

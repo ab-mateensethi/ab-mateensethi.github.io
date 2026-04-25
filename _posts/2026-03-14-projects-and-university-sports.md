@@ -14,7 +14,6 @@ filters:
   - Academics
   - Future
   - Growth
-  - Projects
 ---
 The second semester offered a balance of academic projects, extracurricular activities and personal growth. In the database course, I worked on practical projects that involved training a machine learning model, deploying it on GitHub and preparing a portfolio. These assignments allowed me to apply theoretical knowledge to real-world tasks, improving my technical skills, problem-solving abilities and confidence in handling complex projects independently. Working in a structured environment with deadlines also taught time management and planning skills.
 

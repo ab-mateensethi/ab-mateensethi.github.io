@@ -13,7 +13,6 @@ cover_image: "/assets/images/journal/article-09.jpeg"
 filters:
   - Academics
   - Growth
-  - Projects
   - Transition
 ---
 The initial weeks of the second semester focused on familiarizing ourselves with new courses and gaining practical experience in labs. Meeting new teachers and attending course introductions helped set clear expectations for subjects like OOP in C#, Database Theory and website development using WordPress. Teachers explained both theoretical foundations and practical applications, which motivated me to actively participate and build a strong understanding from the beginning.

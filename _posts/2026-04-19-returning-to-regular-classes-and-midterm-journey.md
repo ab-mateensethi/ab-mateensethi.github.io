@@ -14,7 +14,6 @@ filters:
   - Academics
   - Challenges
   - Growth
-  - Projects
   - Resilience
   - Transition
 ---
