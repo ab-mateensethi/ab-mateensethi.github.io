@@ -36,17 +36,6 @@ body_class: blog-page
   <p class="filter-state" data-filter-state>Showing all chapters in chronological order.</p>
 </section>
 
-<section class="section-card reveal filter-panel">
-  <div class="eyebrow">SEMESTER EXPLORATION</div>
-  <h2>Follow the Journey by Academic Semester</h2>
-  <p class="lead">Explore the journal through the natural rhythm of university life. These semester filters let you revisit the foundations of Semester 1 or jump directly into the deeper momentum of Semester 2 while keeping every chapter neatly organized.</p>
-  <div class="filter-pills" aria-label="Semester content filters">
-    <button class="filter-pill" type="button" data-semester-filter="first-semester" aria-pressed="false">Semester 1</button>
-    <button class="filter-pill" type="button" data-semester-filter="second-semester" aria-pressed="false">Semester 2</button>
-  </div>
-  <p class="filter-state" data-semester-filter-state>Showing all chapters across every semester.</p>
-</section>
-
 {% assign sorted_posts = site.posts | sort: "date" %}
 <section class="post-list filtered-post-list">
   {% for post in sorted_posts %}
@@ -68,3 +57,35 @@ body_class: blog-page
   {% endfor %}
 </section>
 <p class="filter-empty" data-filter-empty hidden>No chapter matches this filter yet. Try another view to continue exploring the journal.</p>
+
+<section class="section-card reveal filter-panel">
+  <div class="eyebrow">SEMESTER EXPLORATION</div>
+  <h2>Follow the Journey by Academic Semester</h2>
+  <p class="lead">Explore the journal through each academic semester in a clear and structured manner. These filters allow you to browse content semester-wise, select Semester 1 to view its articles or choose any other semester to instantly access its respective posts, all while keeping the journey organized and easy to navigate.</p>
+  <div class="filter-pills" aria-label="Semester content filters">
+    <button class="filter-pill" type="button" data-semester-filter="first-semester" aria-pressed="false">Semester 1</button>
+    <button class="filter-pill" type="button" data-semester-filter="second-semester" aria-pressed="false">Semester 2</button>
+  </div>
+  <p class="filter-state" data-semester-filter-state>Select a semester to open its chapters.</p>
+</section>
+
+<section class="post-list semester-post-list" data-semester-post-list hidden>
+  {% for post in sorted_posts %}
+    <article class="post-card reveal semester-filter-card" data-semester-card data-article-number="{{ post.article_number }}" data-semester="{{ post.phase | downcase | replace: ' ', '-' }}">
+      {% include post-cover.html post=post context="listing" %}
+      <p class="post-meta">Article {{ post.article_number }}</p>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <div class="post-labels">
+        {% if post.phase %}
+          <span class="badge">{{ post.phase }}</span>
+        {% endif %}
+        {% if post.focus %}
+          <span class="badge">{{ post.focus }}</span>
+        {% endif %}
+      </div>
+      <p>{{ post.excerpt | strip_html | truncate: 170 }}</p>
+      <a class="text-link" href="{{ post.url | relative_url }}">Read the full post</a>
+    </article>
+  {% endfor %}
+</section>
+<p class="filter-empty" data-semester-filter-empty hidden>No chapter matches this semester yet. Try another semester to continue exploring the journal.</p>

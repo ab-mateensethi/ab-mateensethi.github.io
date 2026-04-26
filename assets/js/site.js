@@ -303,9 +303,12 @@ const revealItems = document.querySelectorAll(".reveal");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const semesterFilterButtons = document.querySelectorAll("[data-semester-filter]");
 const filterCards = document.querySelectorAll("[data-filter-card]");
+const semesterCards = document.querySelectorAll("[data-semester-card]");
 const filterState = document.querySelector("[data-filter-state]");
 const semesterFilterState = document.querySelector("[data-semester-filter-state]");
 const filterEmpty = document.querySelector("[data-filter-empty]");
+const semesterFilterEmpty = document.querySelector("[data-semester-filter-empty]");
+const semesterPostList = document.querySelector("[data-semester-post-list]");
 const contactForm = document.querySelector("[data-contact-form]");
 const contactStatus = document.querySelector("[data-contact-status]");
 
@@ -330,14 +333,12 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
-if ((filterButtons.length || semesterFilterButtons.length) && filterCards.length) {
+if (filterButtons.length && filterCards.length) {
   let selectedFilter = "all";
-  let selectedSemester = "all";
 
   const updateFilters = () => {
     let visibleCount = 0;
     let selectedLabel = "All";
-    let selectedSemesterLabel = "All Semesters";
 
     filterButtons.forEach((button) => {
       const isActive = button.dataset.filter === selectedFilter;
@@ -349,25 +350,12 @@ if ((filterButtons.length || semesterFilterButtons.length) && filterCards.length
       }
     });
 
-    semesterFilterButtons.forEach((button) => {
-      const isActive = button.dataset.semesterFilter === selectedSemester;
-      button.classList.toggle("is-active", isActive);
-      button.setAttribute("aria-pressed", String(isActive));
-
-      if (isActive) {
-        selectedSemesterLabel = button.textContent.trim();
-      }
-    });
-
     filterCards.forEach((card) => {
       const filters = (card.dataset.filters || "")
         .split("|")
         .map((filter) => filter.trim())
         .filter(Boolean);
-      const semester = (card.dataset.semester || "").trim();
-      const matchesFilter = selectedFilter === "all" || filters.includes(selectedFilter);
-      const matchesSemester = selectedSemester === "all" || semester === selectedSemester;
-      const isMatch = matchesFilter && matchesSemester;
+      const isMatch = selectedFilter === "all" || filters.includes(selectedFilter);
 
       card.hidden = !isMatch;
 
@@ -381,13 +369,6 @@ if ((filterButtons.length || semesterFilterButtons.length) && filterCards.length
         selectedFilter === "all"
           ? "Showing all chapters in chronological order."
           : `Showing ${visibleCount} chapter${visibleCount === 1 ? "" : "s"} for ${selectedLabel}.`;
-    }
-
-    if (semesterFilterState) {
-      semesterFilterState.textContent =
-        selectedSemester === "all"
-          ? "Showing all chapters across every semester."
-          : `Showing ${visibleCount} chapter${visibleCount === 1 ? "" : "s"} from ${selectedSemesterLabel}.`;
     }
 
     if (filterEmpty) {
@@ -410,6 +391,73 @@ if ((filterButtons.length || semesterFilterButtons.length) && filterCards.length
   });
 
   updateFilters();
+}
+
+if (semesterFilterButtons.length && semesterCards.length && semesterPostList) {
+  let selectedSemester = "all";
+
+  const updateSemesterFilters = () => {
+    let visibleCount = 0;
+    let selectedSemesterLabel = "";
+
+    semesterFilterButtons.forEach((button) => {
+      const isActive = button.dataset.semesterFilter === selectedSemester;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+
+      if (isActive) {
+        selectedSemesterLabel = button.textContent.trim();
+      }
+    });
+
+    if (selectedSemester === "all") {
+      semesterCards.forEach((card) => {
+        card.hidden = true;
+      });
+
+      semesterPostList.hidden = true;
+
+      if (semesterFilterState) {
+        semesterFilterState.textContent = "Select a semester to open its chapters.";
+      }
+
+      if (semesterFilterEmpty) {
+        semesterFilterEmpty.hidden = true;
+      }
+
+      return;
+    }
+
+    semesterCards.forEach((card) => {
+      const semester = (card.dataset.semester || "").trim();
+      const isMatch = semester === selectedSemester;
+
+      card.hidden = !isMatch;
+
+      if (isMatch) {
+        visibleCount += 1;
+      }
+    });
+
+    semesterPostList.hidden = false;
+
+    if (semesterFilterState) {
+      semesterFilterState.textContent = `Showing ${visibleCount} chapter${visibleCount === 1 ? "" : "s"} from ${selectedSemesterLabel}.`;
+    }
+
+    if (semesterFilterEmpty) {
+      semesterFilterEmpty.hidden = visibleCount !== 0;
+    }
+  };
+
+  semesterFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedSemester = selectedSemester === button.dataset.semesterFilter ? "all" : button.dataset.semesterFilter;
+      updateSemesterFilters();
+    });
+  });
+
+  updateSemesterFilters();
 }
 
 if (contactForm) {
