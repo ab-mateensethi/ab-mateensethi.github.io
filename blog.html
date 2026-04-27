@@ -37,6 +37,17 @@ body_class: blog-page
 </section>
 
 {% assign sorted_posts = site.posts | sort: "date" %}
+<section class="section-card reveal filter-panel">
+  <div class="eyebrow">SEMESTER EXPLORATION</div>
+  <h2>Follow the Journey by Academic Semester</h2>
+  <p class="lead">Explore the journal through each academic semester in a clear and structured manner. These filters allow you to browse content semester-wise, select Semester 1 to view its articles or choose any other semester to instantly access its respective posts, all while keeping the journey organized and easy to navigate.</p>
+  <div class="filter-pills" aria-label="Semester content filters">
+    <button class="filter-pill" type="button" data-semester-filter="first-semester" aria-pressed="false">Semester 1</button>
+    <button class="filter-pill" type="button" data-semester-filter="second-semester" aria-pressed="false">Semester 2</button>
+  </div>
+  <p class="filter-state" data-semester-filter-state>Select a semester to open its chapters.</p>
+</section>
+
 <section class="post-list filtered-post-list">
   {% for post in sorted_posts %}
     <article class="post-card reveal filter-card" data-filter-card data-article-number="{{ post.article_number }}" data-semester="{{ post.phase | downcase | replace: ' ', '-' }}" data-filters="{{ post.filters | join: '|' | downcase }}">
@@ -57,17 +68,6 @@ body_class: blog-page
   {% endfor %}
 </section>
 <p class="filter-empty" data-filter-empty hidden>No chapter matches this filter yet. Try another view to continue exploring the journal.</p>
-
-<section class="section-card reveal filter-panel">
-  <div class="eyebrow">SEMESTER EXPLORATION</div>
-  <h2>Follow the Journey by Academic Semester</h2>
-  <p class="lead">Explore the journal through each academic semester in a clear and structured manner. These filters allow you to browse content semester-wise, select Semester 1 to view its articles or choose any other semester to instantly access its respective posts, all while keeping the journey organized and easy to navigate.</p>
-  <div class="filter-pills" aria-label="Semester content filters">
-    <button class="filter-pill" type="button" data-semester-filter="first-semester" aria-pressed="false">Semester 1</button>
-    <button class="filter-pill" type="button" data-semester-filter="second-semester" aria-pressed="false">Semester 2</button>
-  </div>
-  <p class="filter-state" data-semester-filter-state>Select a semester to open its chapters.</p>
-</section>
 
 <section class="post-list semester-post-list" data-semester-post-list hidden>
   {% for post in sorted_posts %}
