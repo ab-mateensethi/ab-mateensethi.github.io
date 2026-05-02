@@ -67,25 +67,4 @@ body_class: blog-page
     </article>
   {% endfor %}
 </section>
-<p class="filter-empty" data-filter-empty hidden>No chapter matches this filter yet. Try another view to continue exploring the journal.</p>
-
-<section class="post-list semester-post-list" data-semester-post-list hidden>
-  {% for post in sorted_posts %}
-    <article class="post-card reveal semester-filter-card" data-semester-card data-article-number="{{ post.article_number }}" data-semester="{{ post.phase | downcase | replace: ' ', '-' }}">
-      {% include post-cover.html post=post context="listing" %}
-      <p class="post-meta">Article {{ post.article_number }}</p>
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <div class="post-labels">
-        {% if post.phase %}
-          <span class="badge">{{ post.phase }}</span>
-        {% endif %}
-        {% if post.focus %}
-          <span class="badge">{{ post.focus }}</span>
-        {% endif %}
-      </div>
-      <p>{{ post.excerpt | strip_html | truncate: 170 }}</p>
-      <a class="text-link" href="{{ post.url | relative_url }}">Read the full post</a>
-    </article>
-  {% endfor %}
-</section>
-<p class="filter-empty" data-semester-filter-empty hidden>No chapter matches this semester yet. Try another semester to continue exploring the journal.</p>
+<p class="filter-empty" data-filter-empty hidden>No chapter matches this selection yet. Try another view to continue exploring the journal.</p>
