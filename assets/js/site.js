@@ -16,6 +16,7 @@ const galleryModal = document.querySelector("[data-gallery-modal]");
 const galleryCloseControls = document.querySelectorAll("[data-gallery-close]");
 const galleryModalTitle = document.querySelector("[data-gallery-title]");
 const galleryCounter = document.querySelector("[data-gallery-counter]");
+const galleryFigure = document.querySelector("[data-gallery-figure]");
 const galleryImage = document.querySelector("[data-gallery-image]");
 const galleryVideo = document.querySelector("[data-gallery-video]");
 const galleryCaption = document.querySelector("[data-gallery-caption]");
@@ -158,7 +159,7 @@ if (avatarTrigger && avatarModal) {
   });
 }
 
-if (galleryModal && galleryImage && galleryVideo && galleryThumbs && galleryModalTitle && galleryCounter && galleryCaption) {
+if (galleryModal && galleryFigure && galleryImage && galleryVideo && galleryThumbs && galleryModalTitle && galleryCounter && galleryCaption) {
   const detectGalleryItemType = (src) => (/\.(mp4|webm|ogg)$/i.test(src) ? "video" : "image");
 
   const parseGalleryItems = (trigger) => {
@@ -206,6 +207,7 @@ if (galleryModal && galleryImage && galleryVideo && galleryThumbs && galleryModa
     galleryModalTitle.textContent = getGalleryTitle();
 
     if (currentItem.type === "video") {
+      galleryFigure.classList.add("is-video");
       galleryImage.setAttribute("hidden", "");
       galleryImage.removeAttribute("src");
       galleryVideo.removeAttribute("hidden");
@@ -217,6 +219,7 @@ if (galleryModal && galleryImage && galleryVideo && galleryThumbs && galleryModa
       galleryVideo.setAttribute("aria-label", currentItem.caption);
       galleryVideo.load();
     } else {
+      galleryFigure.classList.remove("is-video");
       galleryVideo.pause();
       galleryVideo.setAttribute("hidden", "");
       galleryVideo.removeAttribute("src");

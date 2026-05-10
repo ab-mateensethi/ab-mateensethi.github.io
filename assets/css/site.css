@@ -411,6 +411,7 @@ img {
   border-radius: 26px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
 }
 
 .gallery-modal-image,
@@ -423,6 +424,16 @@ img {
 
 .gallery-modal-video {
   background: #03070d;
+}
+
+.gallery-modal-figure.is-video {
+  padding: 0.3rem;
+}
+
+.gallery-modal-figure.is-video .gallery-modal-video {
+  max-height: min(68vh, 760px);
+  transform: scale(1.05);
+  transform-origin: center;
 }
 
 .gallery-modal-image[hidden],
@@ -1998,6 +2009,11 @@ html[data-theme="dark"] .contact-field textarea {
   .gallery-modal-video {
     max-height: min(48vh, 480px);
     border-radius: 16px;
+  }
+
+  .gallery-modal-figure.is-video .gallery-modal-video {
+    max-height: min(54vh, 520px);
+    transform: scale(1.03);
   }
 
   .gallery-modal-nav {
