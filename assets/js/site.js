@@ -17,6 +17,7 @@ const galleryCloseControls = document.querySelectorAll("[data-gallery-close]");
 const galleryModalTitle = document.querySelector("[data-gallery-title]");
 const galleryCounter = document.querySelector("[data-gallery-counter]");
 const galleryImage = document.querySelector("[data-gallery-image]");
+const galleryVideo = document.querySelector("[data-gallery-video]");
 const galleryCaption = document.querySelector("[data-gallery-caption]");
 const galleryThumbs = document.querySelector("[data-gallery-thumbs]");
 const galleryPrev = document.querySelector("[data-gallery-prev]");
@@ -157,7 +158,9 @@ if (avatarTrigger && avatarModal) {
   });
 }
 
-if (galleryModal && galleryImage && galleryThumbs && galleryModalTitle && galleryCounter && galleryCaption) {
+if (galleryModal && galleryImage && galleryVideo && galleryThumbs && galleryModalTitle && galleryCounter && galleryCaption) {
+  const detectGalleryItemType = (src) => (/\.(mp4|webm|ogg)$/i.test(src) ? "video" : "image");
+
   const parseGalleryItems = (trigger) => {
     const images = (trigger.dataset.galleryImages || "")
       .split("|")
@@ -169,7 +172,8 @@ if (galleryModal && galleryImage && galleryThumbs && galleryModalTitle && galler
 
     return images.map((src, index) => ({
       src,
-      caption: captions[index] || `Preview image ${index + 1}`
+      type: detectGalleryItemType(src),
+      caption: captions[index] || `Preview item ${index + 1}`
     }));
   };
 
@@ -182,17 +186,46 @@ if (galleryModal && galleryImage && galleryThumbs && galleryModalTitle && galler
     galleryCounter.textContent = hasMultipleImages ? `${activeGalleryIndex + 1} / ${activeGalleryItems.length}` : "";
   };
 
+  const getGalleryTitle = () => {
+    const hasVideo = activeGalleryItems.some((item) => item.type === "video");
+
+    if (hasVideo) {
+      return activeGalleryItems.length > 1 ? "Preview Images and Video" : "Preview Video";
+    }
+
+    return activeGalleryItems.length > 1 ? "Preview Images" : "Preview Image";
+  };
+
   const renderGallery = () => {
     const currentItem = activeGalleryItems[activeGalleryIndex];
-    const hasMultipleImages = activeGalleryItems.length > 1;
 
     if (!currentItem) {
       return;
     }
 
-    galleryModalTitle.textContent = hasMultipleImages ? "Preview Images" : "Preview Image";
-    galleryImage.src = currentItem.src;
-    galleryImage.alt = currentItem.caption;
+    galleryModalTitle.textContent = getGalleryTitle();
+
+    if (currentItem.type === "video") {
+      galleryImage.setAttribute("hidden", "");
+      galleryImage.removeAttribute("src");
+      galleryVideo.removeAttribute("hidden");
+
+      if (galleryVideo.src !== currentItem.src) {
+        galleryVideo.src = currentItem.src;
+      }
+
+      galleryVideo.setAttribute("aria-label", currentItem.caption);
+      galleryVideo.load();
+    } else {
+      galleryVideo.pause();
+      galleryVideo.setAttribute("hidden", "");
+      galleryVideo.removeAttribute("src");
+      galleryVideo.load();
+      galleryImage.removeAttribute("hidden");
+      galleryImage.src = currentItem.src;
+      galleryImage.alt = currentItem.caption;
+    }
+
     galleryCaption.textContent = currentItem.caption;
 
     galleryThumbs.querySelectorAll(".gallery-thumb").forEach((thumb, index) => {
@@ -215,6 +248,7 @@ if (galleryModal && galleryImage && galleryThumbs && galleryModalTitle && galler
   };
 
   const closeGallery = () => {
+    galleryVideo.pause();
     galleryModal.setAttribute("hidden", "");
     syncBodyModalState();
 
@@ -237,16 +271,32 @@ if (galleryModal && galleryImage && galleryThumbs && galleryModalTitle && galler
 
     activeGalleryItems.forEach((item, index) => {
       const thumb = document.createElement("button");
-      const thumbImage = document.createElement("img");
 
       thumb.type = "button";
       thumb.className = "gallery-thumb";
       thumb.dataset.index = String(index);
-      thumb.setAttribute("aria-label", `Show image ${index + 1}`);
+      thumb.setAttribute("aria-label", `Show ${item.type === "video" ? "video" : "image"} ${index + 1}`);
 
-      thumbImage.src = item.src;
-      thumbImage.alt = item.caption;
-      thumb.appendChild(thumbImage);
+      if (item.type === "video") {
+        const videoThumb = document.createElement("div");
+        const videoPlay = document.createElement("span");
+        const videoLabel = document.createElement("span");
+
+        videoThumb.className = "gallery-thumb-video";
+        videoPlay.className = "gallery-thumb-play";
+        videoLabel.className = "gallery-thumb-video-label";
+        videoLabel.textContent = "Video";
+
+        videoThumb.appendChild(videoPlay);
+        videoThumb.appendChild(videoLabel);
+        thumb.appendChild(videoThumb);
+      } else {
+        const thumbImage = document.createElement("img");
+
+        thumbImage.src = item.src;
+        thumbImage.alt = item.caption;
+        thumb.appendChild(thumbImage);
+      }
 
       thumb.addEventListener("click", () => {
         setGalleryIndex(index);

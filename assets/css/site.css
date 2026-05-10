@@ -413,11 +413,21 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.gallery-modal-image {
+.gallery-modal-image,
+.gallery-modal-video {
   width: 100%;
   max-height: min(58vh, 640px);
   border-radius: 20px;
   object-fit: contain;
+}
+
+.gallery-modal-video {
+  background: #03070d;
+}
+
+.gallery-modal-image[hidden],
+.gallery-modal-video[hidden] {
+  display: none;
 }
 
 .gallery-modal-nav {
@@ -485,6 +495,35 @@ img {
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   object-fit: cover;
+}
+
+.gallery-thumb-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(49, 91, 140, 0.42), rgba(185, 133, 88, 0.24));
+  color: #ffffff;
+}
+
+.gallery-thumb-play {
+  width: 0;
+  height: 0;
+  border-top: 0.48rem solid transparent;
+  border-bottom: 0.48rem solid transparent;
+  border-left: 0.78rem solid #ffffff;
+  margin-left: 0.15rem;
+}
+
+.gallery-thumb-video-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .brand-text {
@@ -1955,7 +1994,8 @@ html[data-theme="dark"] .contact-field textarea {
     padding: 0.45rem;
   }
 
-  .gallery-modal-image {
+  .gallery-modal-image,
+  .gallery-modal-video {
     max-height: min(48vh, 480px);
     border-radius: 16px;
   }
