@@ -28,4 +28,4 @@ Another highlight of my first semester was working on our first major project, w
 
 {% include gallery-trigger.html label="Preview Images" title="Lab Experiences Gallery" images="/assets/images/journal/gallery/article-05-photo-01.jpeg|/assets/images/journal/gallery/article-05-photo-02.jpeg|/assets/images/journal/gallery/article-05-photo-03.jpeg|/assets/images/journal/gallery/article-05-photo-04.jpeg|/assets/images/journal/gallery/article-05-photo-05.jpeg|/assets/images/journal/gallery/article-05-photo-06.jpeg|/assets/images/journal/gallery/article-05-photo-07.jpeg" captions="IEEE CIS welcome-day snapshot.|Python project code in Visual Studio.|Price outliers visualization from the project.|Actual versus predicted price chart.|Model performance summary for the project.|A university lab moment with a teacher.|Working on the project during a lab session." %}
 
-#MLwithDrBilalAhmad 
+#MLwithDrBilalAhmad #MLProject
