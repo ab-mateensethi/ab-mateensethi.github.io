@@ -1601,6 +1601,17 @@ html[data-theme="dark"] .contact-field textarea {
   max-width: 72ch;
 }
 
+.article-content a {
+  color: #1d63c6;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+html[data-theme="dark"] .article-content a {
+  color: #82b7ff;
+}
+
 .article-content h2 {
   margin-top: 1.65rem;
 }

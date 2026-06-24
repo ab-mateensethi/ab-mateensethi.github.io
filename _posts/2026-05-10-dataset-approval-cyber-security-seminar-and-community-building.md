@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Dataset Approval, Cyber Security Seminar, and Community Building"
+article_number: 16
+date: 2026-05-10 09:00:00 +0500
+phase: "Second Semester"
+focus: "Dataset Approval, Cyber Security & Community"
+location: "Database Lab, CIS Seminar and Computer Engineering Community"
+excerpt: "A week shaped by database project approval, cyber security guidance and the first steps toward building a stronger Computer Engineering community."
+intro: "This chapter brings together three important milestones: getting the Heart Failure Prediction dataset approved, learning from a cyber security seminar and building a digital identity for the Computer Engineering community."
+cover_theme: "signal"
+cover_image: "/assets/images/journal/article-16.png"
+filters:
+  - Academics
+  - Achievements
+  - Future
+  - Growth
+---
+As the semester progressed, one of the major tasks for our Database Systems project was getting our dataset approved. As I mentioned in my previous article, my group and I had shortlisted three datasets and were waiting for final approval from our instructor. To facilitate this process, our respected teacher, Dr. Bilal Ahmad, arranged a special lab session where students presented their selected datasets. Those whose datasets did not meet the required criteria were given another opportunity to revise and resubmit them for approval. Alhamdulillah, our dataset, **"Heart Failure Prediction,"** was approved successfully. We had obtained it from Kaggle, and it fulfilled all the requirements defined by our instructor, including a proper source, licensing information and real-world relevance. While many groups received approval, some students still faced challenges and had to continue searching for suitable datasets. My group partner and I were very happy because the approval gave us confidence and motivation to move forward. With our dataset finalized, we officially started working on the database project and began planning the next stages of development.
+
+During the same week, CIS, a student society associated with the IEEE branch, organized a special seminar for Computer Engineering students. Students from both sections participated because it was a valuable learning opportunity. The guest speaker was **Mr. Zain Tahir**, an experienced professional working in the technology industry. The seminar focused on **Cyber Security**, a rapidly growing field with increasing importance in today's digital world. Mr. Zain explained the fundamentals of Cyber Security, its scope and its future career opportunities. He discussed important concepts such as phishing attacks, malware, social engineering and other common cyber threats. He also guided students on how beginners can start building a career in this field and shared several useful learning resources, channels and platforms for self-study. Since our summer vacation of approximately two to two and a half months was approaching after the second semester, I carefully noted the points he discussed. Personally, I have been interested in Cyber Security for a long time and had already joined a free online academy to learn about the field. However, due to university responsibilities such as quizzes, assignments, projects and lab work, I could not dedicate enough time to it during the semester. As I was already planning to continue learning during the summer break, this seminar gave me additional motivation and a clearer direction for my learning journey. The session was highly informative and inspiring, and some pictures from the event are attached with this article.
+
+{% include gallery-trigger.html label="Preview Images" title="Cyber Security Seminar Gallery" images="/assets/images/journal/gallery/article-16-photo-01.jpeg|/assets/images/journal/gallery/article-16-photo-02.jpeg|/assets/images/journal/gallery/article-16-photo-03.jpeg|/assets/images/journal/gallery/article-16-photo-04.jpeg" captions="Mr. Zain Tahir presenting key cyber security concepts during the CIS seminar.|Computer Engineering students attending the IEEE CIS cyber security seminar.|Seminar slide highlighting free cyber security learning resources for beginners.|Speaker discussing professional certifications and career paths in cyber security." %}
+
+Alongside academic activities, I also worked on initiatives to represent and promote our department. Since the Computer Engineering program at UET Lahore Faisalabad Campus is the first batch of the 2025 session, I realized during my second semester that our department should have a dedicated social media presence similar to other departments. Therefore, I created Facebook and Instagram pages for the Computer Engineering community. My classmates and senior students provided great support for this initiative. The main purpose of these pages is to represent our department, showcase student projects, exhibitions, seminars, workshops and other achievements, while also providing guidance to future students who will join the department. These platforms will help create a positive digital presence for our community and allow us to share our experiences with a wider audience.
+
+**Facebook Page:** [https://www.facebook.com/share/19EvFUwnko/](https://www.facebook.com/share/19EvFUwnko/)
+
+**Instagram Page:** [https://www.instagram.com/ce.uetfsbd?igsh=MW95bHJlamcxcXFsNg==](https://www.instagram.com/ce.uetfsbd?igsh=MW95bHJlamcxcXFsNg==)
+
+In addition, students from both sections collaborated to establish a WhatsApp community. Six students from Section A and six students from Section B actively participated in managing and organizing this community. The primary goal is to improve communication and teamwork among students while preparing for future activities such as exhibitions, poster designing, event management and other departmental initiatives. Furthermore, when new batches join the department, this community will help us organize seminars, guidance sessions and orientation activities for junior students. Through these efforts, we hope to build a strong, connected and supportive Computer Engineering community. Overall, this period of the semester was filled with learning, achievements and community-building activities that contributed significantly to my academic and personal growth.
