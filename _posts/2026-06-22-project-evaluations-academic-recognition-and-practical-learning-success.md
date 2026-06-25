@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Project Evaluations, Academic Recognition and Practical Learning Success"
+title: "Project Evaluations, Academic Recognition & Practical Learning Success"
 article_number: 22
 date: 2026-06-22 09:00:00 +0500
 phase: "Second Semester"
