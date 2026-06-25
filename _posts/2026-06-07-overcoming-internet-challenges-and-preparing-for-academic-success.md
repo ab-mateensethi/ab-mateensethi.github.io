@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Overcoming Internet Challenges and Preparing for Academic Success"
+title: "Overcoming Internet Challenges & Preparing for Academic Success"
 article_number: 19
 date: 2026-06-07 09:00:00 +0500
 phase: "Second Semester"
