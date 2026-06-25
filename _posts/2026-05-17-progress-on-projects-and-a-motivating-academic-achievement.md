@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Progress on Projects and a Motivating Academic Achievement"
+title: "Progress on Projects & a Motivating Academic Achievement"
 article_number: 17
 date: 2026-05-17 09:00:00 +0500
 phase: "Second Semester"
