@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Midterm Results, Eid-ul-Azha Celebrations and the Ronak Mela Event"
+title: "Midterm Results, Eid-ul-Azha Celebrations & the Ronak Mela Event"
 article_number: 18
 date: 2026-05-31 09:00:00 +0500
 phase: "Second Semester"
