@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Final Weeks of the Semester, Project Development and Effective Time Management"
+title: "Final Weeks of the Semester, Project Development & Effective Time Management"
 article_number: 21
 date: 2026-06-21 09:00:00 +0500
 phase: "Second Semester"
