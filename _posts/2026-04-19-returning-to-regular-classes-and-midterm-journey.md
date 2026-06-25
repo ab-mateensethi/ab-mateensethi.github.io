@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Returning to Regular Classes and Midterm Journey"
+title: "Returning to Regular Classes & Midterm Journey"
 article_number: 13
 date: 2026-04-19 09:00:00 +0500
 phase: "Second Semester"
