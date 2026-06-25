@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OOP Lab Result, Coursera License Achievement and Final Exam Preparation"
+title: "OOP Lab Result, Coursera License Achievement & Final Exam Preparation"
 article_number: 26
 date: 2026-06-24 11:00:00 +0500
 phase: "Second Semester"
