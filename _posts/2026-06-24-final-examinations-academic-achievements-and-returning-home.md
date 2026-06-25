@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Final Examinations, Academic Achievements and Returning Home"
+title: "Final Examinations, Academic Achievements & Returning Home"
 article_number: 27
 date: 2026-06-24 12:00:00 +0500
 phase: "Second Semester"
