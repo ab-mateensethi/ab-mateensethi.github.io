@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DLD Lab Results, Spiritual Reflection and Final Exam Preparation"
+title: "DLD Lab Results, Spiritual Reflection & Final Exam Preparation"
 article_number: 25
 date: 2026-06-24 10:00:00 +0500
 phase: "Second Semester"
