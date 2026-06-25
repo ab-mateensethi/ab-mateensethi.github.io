@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Exploring Real-World Datasets, Academic Projects and Communication Skills"
+title: "Exploring Real-World Datasets, Academic Projects & Communication Skills"
 article_number: 15
 date: 2026-05-03 09:00:00 +0500
 phase: "Second Semester"
