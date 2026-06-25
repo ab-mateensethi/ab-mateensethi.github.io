@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Academic Progress, Technical Assignments and Presentation Experience"
+title: "Academic Progress, Technical Assignments & Presentation Experience"
 article_number: 20
 date: 2026-06-14 09:00:00 +0500
 phase: "Second Semester"
