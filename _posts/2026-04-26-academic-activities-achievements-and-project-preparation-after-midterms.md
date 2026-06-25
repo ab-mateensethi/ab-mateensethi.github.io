@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Academic Activities, Achievements and Project Preparation After Midterms"
+title: "Academic Activities, Achievements & Project Preparation After Midterms"
 article_number: 14
 date: 2026-04-26 09:00:00 +0500
 phase: "Second Semester"
