@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dataset Approval, Cyber Security Seminar and Community Building"
+title: "Dataset Approval, Cyber Security Seminar & Community Building"
 article_number: 16
 date: 2026-05-10 09:00:00 +0500
 phase: "Second Semester"
