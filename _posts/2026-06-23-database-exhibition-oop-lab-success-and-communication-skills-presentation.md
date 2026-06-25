@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Database Exhibition, OOP Lab Success and Communication Skills Presentation"
+title: "Database Exhibition, OOP Lab Success & Communication Skills Presentation"
 article_number: 23
 date: 2026-06-23 09:00:00 +0500
 phase: "Second Semester"
