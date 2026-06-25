@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DLD Project Exhibition, E-Commerce Seminar and Final Exam Preparation"
+title: "DLD Project Exhibition, E-Commerce Seminar & Final Exam Preparation"
 article_number: 24
 date: 2026-06-24 09:00:00 +0500
 phase: "Second Semester"
