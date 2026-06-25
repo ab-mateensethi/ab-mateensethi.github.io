@@ -12,7 +12,6 @@ cover_theme: "signal"
 cover_image: "/assets/images/journal/article-20.png"
 filters:
   - Academics
-  - Achievements
   - Challenges
   - Growth
 ---

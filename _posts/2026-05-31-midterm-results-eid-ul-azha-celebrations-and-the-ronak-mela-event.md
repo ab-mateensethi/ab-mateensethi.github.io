@@ -12,7 +12,6 @@ cover_theme: "signal"
 cover_image: "/assets/images/journal/article-18.png"
 filters:
   - Academics
-  - Achievements
   - Growth
   - Resilience
 ---

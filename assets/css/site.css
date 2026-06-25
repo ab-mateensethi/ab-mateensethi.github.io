@@ -340,7 +340,8 @@ img {
   background: rgba(8, 15, 25, 0.94);
   color: #edf5ff;
   box-shadow: 0 34px 96px rgba(0, 0, 0, 0.46);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .gallery-modal-close {
@@ -431,8 +432,8 @@ img {
 }
 
 .gallery-modal-figure.is-video .gallery-modal-video {
-  max-height: min(68vh, 760px);
-  transform: scale(1.05);
+  max-height: min(52vh, 560px);
+  transform: scale(1.02);
   transform-origin: center;
 }
 
@@ -469,6 +470,7 @@ img {
 .gallery-modal-caption {
   margin: 0;
   color: rgba(237, 245, 255, 0.82);
+  min-height: 1.5rem;
 }
 
 .gallery-modal-thumbs {
@@ -2023,8 +2025,8 @@ html[data-theme="dark"] .article-content a {
   }
 
   .gallery-modal-figure.is-video .gallery-modal-video {
-    max-height: min(54vh, 520px);
-    transform: scale(1.03);
+    max-height: min(42vh, 420px);
+    transform: scale(1.01);
   }
 
   .gallery-modal-nav {

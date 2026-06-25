@@ -14,7 +14,6 @@ filters:
   - Academics
   - Achievements
   - Growth
-  - Projects
 ---
 As the semester moved closer to its conclusion, the evaluation phase of our major projects officially began. Our Database Systems Project, which had been divided into three stages by our instructor, was finally ready for assessment. As mentioned in my previous articles, the project required us to first select and approve a dataset, then design a database based on that dataset, apply Machine Learning techniques for prediction and finally develop a frontend using FastAPI. After completing all these stages and following the provided guidelines, we submitted our project before the deadline. Since Friday was an official holiday, our database lab sessions were conducted online. Our instructor scheduled the project evaluations through Google Classroom, where students shared their screens, explained their code and answered technical questions related to their work. Alhamdulillah, our evaluation went smoothly and many students completed their assessments on the same day. Those who could not be evaluated were scheduled for the following week. In addition, we were informed that the project would also be presented in an upcoming exhibition where faculty members from different departments could ask questions about our work. This encouraged all students to thoroughly understand every aspect of their projects. After the evaluation, we submitted the complete project in the form of a compressed ZIP file before the final deadline.
 
