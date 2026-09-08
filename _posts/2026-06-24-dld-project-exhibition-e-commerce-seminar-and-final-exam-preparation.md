@@ -10,6 +10,7 @@ excerpt: "A DLD assignment, project exhibition, inspiring E-Commerce seminar and
 intro: "This chapter captures the final practical stretch of the semester, where hardware design, seminar learning and exam planning came together before finals."
 cover_theme: "signal"
 cover_image: "/assets/images/journal/article-24.png"
+visual_media: true
 filters:
   - Academics
   - Achievements

@@ -10,6 +10,7 @@ excerpt: "Project evaluations, full marks, OOP lab manual recognition and practi
 intro: "This chapter highlights the reward phase of the semester, where completed projects, practical evaluations and academic recognition reflected weeks of disciplined effort."
 cover_theme: "signal"
 cover_image: "/assets/images/journal/article-22.png"
+visual_media: true
 filters:
   - Academics
   - Achievements

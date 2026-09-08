@@ -10,6 +10,7 @@ excerpt: "Strong academic performance, memorable Calculus-II success and early D
 intro: "This chapter captures the momentum after midterms, where regular classes resumed, achievements were celebrated and project preparation began to take shape."
 cover_theme: "signal"
 cover_image: "/assets/images/journal/article-14.jpeg"
+visual_media: true
 filters:
   - Academics
   - Achievements

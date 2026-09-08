@@ -10,6 +10,7 @@ excerpt: "The project exhibition, OOP open-ended lab evaluation and an interacti
 intro: "This chapter brings together public project presentation, practical programming success and creative communication, showing how technical learning becomes stronger when it is shared confidently."
 cover_theme: "signal"
 cover_image: "/assets/images/journal/article-23.png"
+visual_media: true
 filters:
   - Academics
   - Achievements

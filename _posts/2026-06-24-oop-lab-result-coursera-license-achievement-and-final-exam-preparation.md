@@ -10,6 +10,7 @@ excerpt: "A strong OOP lab result, Coursera license activation and disciplined f
 intro: "This chapter highlights programming progress, global learning opportunities and the focused study rhythm that carried the final examination week forward."
 cover_theme: "signal"
 cover_image: "/assets/images/journal/article-26.png"
+visual_media: true
 filters:
   - Academics
   - Achievements

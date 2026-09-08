@@ -10,6 +10,7 @@ excerpt: "The final weeks brought database lab submissions, OOP project developm
 intro: "This chapter captures the demanding final phase of the semester, where technical projects, lab submissions and personal responsibility all had to be balanced with focus and consistency."
 cover_theme: "signal"
 cover_image: "/assets/images/journal/article-21.png"
+visual_media: true
 filters:
   - Academics
   - Challenges

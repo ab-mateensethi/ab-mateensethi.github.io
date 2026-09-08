@@ -10,6 +10,7 @@ excerpt: "The completion of final exams, strong DLD and Database achievements an
 intro: "This chapter closes the second semester with gratitude, academic improvement, friendships, farewell moments and the hopeful beginning of summer break."
 cover_theme: "signal"
 cover_image: "/assets/images/journal/article-27.png"
+visual_media: true
 filters:
   - Academics
   - Achievements

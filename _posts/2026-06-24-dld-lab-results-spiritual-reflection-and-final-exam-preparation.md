@@ -10,6 +10,7 @@ excerpt: "DLD lab results, a meaningful hostel reflection session and focused fi
 intro: "This chapter reflects the final preparation stage of the semester, where achievement, faith, friendship and revision shaped a calm but determined mindset."
 cover_theme: "signal"
 cover_image: "/assets/images/journal/article-25.png"
+visual_media: true
 filters:
   - Academics
   - Achievements

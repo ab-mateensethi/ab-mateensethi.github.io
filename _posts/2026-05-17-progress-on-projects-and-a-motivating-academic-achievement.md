@@ -10,6 +10,7 @@ excerpt: "A week of database project progress, DLD circuit challenges and a prou
 intro: "This chapter captures the balance of technical project progress and academic achievement, from database design and DLD circuit work to a motivating OOP midterm result."
 cover_theme: "signal"
 cover_image: "/assets/images/journal/article-17.png"
+visual_media: true
 filters:
   - Academics
   - Achievements

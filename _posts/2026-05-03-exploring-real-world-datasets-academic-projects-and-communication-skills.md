@@ -10,6 +10,7 @@ excerpt: "Authentic datasets, a console-based university system and a confidence
 intro: "This chapter highlights the stage where real-world datasets, structured software design and communication practice came together in one meaningful stretch of the semester."
 cover_theme: "signal"
 cover_image: "/assets/images/journal/article-15.jpeg"
+visual_media: true
 filters:
   - Academics
   - Projects

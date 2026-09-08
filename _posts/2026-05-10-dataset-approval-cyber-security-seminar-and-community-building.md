@@ -10,6 +10,7 @@ excerpt: "A week shaped by database project approval, cyber security guidance an
 intro: "This chapter brings together three important milestones: getting the Heart Failure Prediction dataset approved, learning from a cyber security seminar and building a digital identity for the Computer Engineering community."
 cover_theme: "signal"
 cover_image: "/assets/images/journal/article-16.png"
+visual_media: true
 filters:
   - Academics
   - Achievements
