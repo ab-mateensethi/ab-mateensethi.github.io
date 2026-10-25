@@ -45,6 +45,7 @@ body_class: blog-page
   <div class="filter-pills" aria-label="Semester content filters">
     <button class="filter-pill" type="button" data-semester-filter="first-semester" aria-pressed="false">Semester 1</button>
     <button class="filter-pill" type="button" data-semester-filter="second-semester" aria-pressed="false">Semester 2</button>
+    <button class="filter-pill" type="button" data-semester-filter="third-semester" aria-pressed="false">Semester 3</button>
   </div>
   <p class="filter-state" data-semester-filter-state>Select a semester to open its chapters.</p>
 </section>
@@ -52,7 +53,7 @@ body_class: blog-page
 <section class="post-list filtered-post-list">
   {% for post in sorted_posts %}
     {% comment %}Projects and Achievements require visual_media: true in the post front matter.{% endcomment %}
-    <article class="post-card reveal filter-card" data-filter-card data-article-number="{{ post.article_number }}" data-semester="{{ post.phase | downcase | replace: ' ', '-' }}" data-filters="{%- for filter in post.filters -%}{%- if filter == 'Projects' or filter == 'Achievements' -%}{%- if post.visual_media -%}{{ filter | downcase }}|{%- endif -%}{%- else -%}{{ filter | downcase }}|{%- endif -%}{%- endfor -%}">
+    <article class="post-card reveal filter-card" data-filter-card data-article-number="{{ post.article_number }}" data-semester="{% if post.article_number >= 29 %}third-semester{% else %}{{ post.phase | downcase | replace: ' ', '-' }}{% endif %}" data-filters="{%- for filter in post.filters -%}{%- if filter == 'Projects' or filter == 'Achievements' -%}{%- if post.visual_media -%}{{ filter | downcase }}|{%- endif -%}{%- else -%}{{ filter | downcase }}|{%- endif -%}{%- endfor -%}">
       {% include post-cover.html post=post context="listing" %}
       <p class="post-meta">Article {{ post.article_number }}</p>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
