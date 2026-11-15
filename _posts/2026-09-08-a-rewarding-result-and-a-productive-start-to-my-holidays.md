@@ -17,6 +17,7 @@ filters:
   - Results
   - Growth
   - Future
+  - Certificates
 ---
 After the completion of my second-semester final examinations, my holidays officially began. I wanted to use this break not only for entertainment but also for improving my health, refreshing my mind and learning new skills. Therefore, one of the first things I did was join a gym in my city. I strongly believe that along with education, physical health is also important because a healthy body helps us maintain a fresh and active mind. Many students spend most of their holidays playing mobile games or staying at home for long hours, but I wanted to create a healthier routine for myself. I decided to go to the gym in the morning after offering Fajr prayer. The gym opened at 5:00 AM, so I usually went there around that time and spent about one to one and a half hours exercising. The peaceful morning environment and physical activity helped me feel refreshed and energetic for the rest of the day. After returning home, I had my post-workout meal, took some rest and then continued with my other daily activities. In this way, I tried to make my holidays balanced by giving time to both my health and personal development.
 
