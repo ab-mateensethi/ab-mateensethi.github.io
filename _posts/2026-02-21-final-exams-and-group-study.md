@@ -18,6 +18,7 @@ filters:
   - Achievements
   - Results
   - Resilience
+  - Certificates
 ---
 At the start of this phase, we attended a Machine Learning workshop conducted by our Programming Fundamentals professor, Dr. Bilal Ahmed. In this workshop, we were introduced to practical skills and gained deeper insights into machine learning concepts. We also worked on hands-on activities, which helped us understand how these concepts are applied in real-world scenarios. After attending the workshop, I received a Certificate of Participation, which was a big achievement for me. It also helped me improve my skills and boosted my confidence in learning new technologies.
 
